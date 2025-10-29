@@ -1,101 +1,156 @@
-import Image from "next/image";
+import { Film, Globe, Music, Sparkles, CheckCircle2, TrendingUp, Shield } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import ServiceCard from "@/components/ServiceCard";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+import HeroSection from "@/components/ui/HeroSection";
 
-export default function Home() {
+const Home = () => {
+  const services = [
+    {
+      icon: Film,
+      title: "Visual Promotion",
+      description: "Create stunning key art, trailers, and social media content that captures attention.",
+      items: ["Key Art Development", "Trailer & Teaser Editing", "Social Media Creatives"],
+    },
+    {
+      icon: Sparkles,
+      title: "Post-Production",
+      description: "Complete editing, sound design, color grading, and VFX for films and web series.",
+      items: ["Film & Web Series Editing", "Sound Design & Mixing", "Color Grading / DI"],
+    },
+    {
+      icon: Globe,
+      title: "Localisation Services",
+      description: "Professional transcription, translation, subtitling, and dubbing in multiple languages.",
+      items: ["Transcription & Translation", "Subtitling & Dubbing", "Multi-language Administration"],
+    },
+    {
+      icon: Music,
+      title: "Music Video Production",
+      description: "End-to-end music video production, from concept to final delivery.",
+      items: ["Music Video Editing", "Key Art Development", "Promo & Teaser Editing"],
+    },
+  ];
+
+  const solutions = [
+    { icon: TrendingUp, title: "OTT/Streaming Platforms", description: "Scalable content solutions" },
+    { icon: Music, title: "Music Labels & Creators", description: "Creative video production" },
+    { icon: Film, title: "Production Houses", description: "Complete post-production" },
+    { icon: Shield, title: "Media Houses", description: "Enterprise-grade services" },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <HeroSection
+        heroBg={heroBg}
+        highlightedText="AI-Powered"
+        title="Post-Production Excellence"
+        subtitle="International Post-Production and Localisation Company delivering cinematic quality across all platforms"
+        primaryBtn={{ href: "/services", title: "Explore Services" }}
+        secondaryBtn={{ href: "/contact", title: "Get in Touch" }}
+      />
+
+      {/* Services Overview */}
+      <section className="section-container">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive solutions for all your production needs
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <ServiceCard {...service} />
+            </div>
+          ))}
+        </div>
+
+        <div className="w-full flex justify-center items-center mt-12">
+          <Button href="/services" title="View All Services" className="btn-primary" />
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-container">
+        <div className="glass-card max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Why Choose Cocoma Studios?</h2>
+            <p className="text-xl text-muted-foreground">
+              Excellence powered by cutting-edge AI technology
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { title: "AI-Powered Workflow", desc: "Leverage advanced AI for faster, smarter production" },
+              { title: "International Expertise", desc: "Multi-language support with native speakers" },
+              { title: "Industry Veterans", desc: "Team of award-winning professionals" },
+              { title: "24/7 Support", desc: "Round-the-clock assistance for global clients" },
+              { title: "Quick Turnaround", desc: "Meet tight deadlines without compromising quality" },
+              { title: "Scalable Solutions", desc: "From indie projects to large-scale productions" },
+            ].map((item, index) => (
+              <div key={item.title} className="flex gap-4 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions */}
+      <section className="section-container">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Tailored Solutions</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Custom services designed for your industry
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
+            <Link key={solution.title} href="/solutions">
+              <div className="glass-card hover-lift text-center group cursor-pointer animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <solution.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                  {solution.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{solution.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-container">
+        <div className="glass-card text-center max-w-4xl mx-auto relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-glow" />
+          <div className="relative">
+            <h2 className="text-4xl font-bold mb-4">Ready to Bring Your Vision to Life?</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Let&apos;s collaborate to create something extraordinary. Contact us today to discuss your project.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/contact" title="Start Your Project" className="btn-primary" />
+              <Button href="/work" title="View Our Work" className="btn-secondary" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Home;
+
