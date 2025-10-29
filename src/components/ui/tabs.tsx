@@ -18,7 +18,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
         <div className="w-full">
             {/* Tabs Header */}
             <div
-                className="flex flex-wrap justify-center gap-4 rounded-xl p-4"
+                className="flex flex-wrap justify-center gap-4 rounded-xl p-2"
                 style={{ backgroundColor: "hsl(var(--muted))" }}
             >
                 {tabs.map((tab) => (
@@ -26,7 +26,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         key={tab.slug}
                         onClick={() => setActiveTab(tab.slug)}
                         className={`relative px-6 py-3 text-sm sm:text-base font-medium rounded-lg transition-all duration-300
-            ${activeTab === tab.slug
+                         ${activeTab === tab.slug
                                 ? "text-white shadow-md"
                                 : "text-gray-300 hover:text-white hover:bg-[hsl(265_75%_60%_/_.2)]"
                             }`}
@@ -36,12 +36,6 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         }}
                     >
                         {tab.label}
-                        {activeTab === tab.slug && (
-                            <span
-                                className="absolute bottom-0 left-0 w-full h-[3px] rounded-t-md transition-all duration-300"
-                                style={{ backgroundColor: "white" }}
-                            ></span>
-                        )}
                     </button>
                 ))}
             </div>

@@ -1,10 +1,11 @@
+import Image, { StaticImageData } from "next/image";
 import { Card } from "./ui/card";
 import { Play } from "lucide-react";
 
 interface WorkCardProps {
   title: string;
   category: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   description?: string;
 }
 
@@ -12,9 +13,10 @@ const WorkCard = ({ title, category, imageUrl, description }: WorkCardProps) => 
   return (
     <Card className="glass-card hover-lift group cursor-pointer overflow-hidden p-0">
       <div className="relative h-64 overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          fill
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
