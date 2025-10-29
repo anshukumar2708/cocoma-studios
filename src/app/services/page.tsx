@@ -2,6 +2,7 @@ import { Film, Sparkles, Globe, Image, Scissors, Mic2, Palette, Wand2, Languages
 import ServiceCard from "@/components/ServiceCard";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Services = () => {
     const visualPromotion = [
@@ -114,14 +115,12 @@ const Services = () => {
 
             {/* CTA */}
             <section className="section-container">
-                <div className="glass-card text-center max-w-4xl mx-auto">
+                <div className="glass-card text-center max-w-4xl mx-auto flex flex-col justify-center items-center">
                     <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
                     <p className="text-xl text-muted-foreground mb-6">
                         Let&apos;s discuss how our services can bring your project to life
                     </p>
-                    <a href="/contact" className="btn-primary inline-block">
-                        Contact Us Today
-                    </a>
+                    <CustomLink href="/contact" title="Contact Us Today" className="btn-primary inline-block" />
                 </div>
             </section>
         </div>

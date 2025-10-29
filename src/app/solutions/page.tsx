@@ -139,7 +139,7 @@ const Solutions = () => {
             <section className="section-container">
                 <div className="glass-card text-center max-w-4xl mx-auto relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-glow" />
-                    <div className="relative">
+                    <div className="relative flex flex-col justify-center items-center">
                         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Workflow?</h2>
                         <p className="text-xl text-muted-foreground mb-6">
                             Let&apos;s discuss how our tailored solutions can accelerate your success

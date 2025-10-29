@@ -178,7 +178,7 @@ const Careers = () => {
 
             {/* CTA */}
             <section className="section-container">
-                <div className="glass-card text-center max-w-4xl mx-auto">
+                <div className="glass-card text-center max-w-4xl mx-auto flex flex-col justify-center items-center">
                     <h2 className="text-3xl font-bold mb-4">Don&apos;t See a Perfect Match?</h2>
                     <p className="text-xl text-muted-foreground mb-6">
                         We&apos;re always looking for talented individuals. Send us your portfolio!

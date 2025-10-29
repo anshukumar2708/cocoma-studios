@@ -1,10 +1,14 @@
+"use client";
 import { Calendar, User } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import heroBg from "@/assets/hero-bg.jpg";
 import HeroSection from "@/components/ui/HeroSection";
 import CustomLink from "@/components/ui/CustomLink";
+import Button from "@/components/ui/Button";
+import { useState } from "react";
 
 const Blog = () => {
+    const [activeCategory, setActiveCategory] = useState<string>("All");
     const posts = [
         {
             title: "The Future of AI in Post-Production",
@@ -74,6 +78,10 @@ const Blog = () => {
 
     const categories = ["All", "Technology", "Tutorial", "Localization", "Audio", "Music Video", "VFX", "Editing"];
 
+    const CategoryChangeHandler = (category: string) => {
+        setActiveCategory(category);
+    }
+
     return (
         <div className="min-h-screen">
 
@@ -87,14 +95,13 @@ const Blog = () => {
 
             {/* Categories */}
             <section className="section-container">
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                <div className="flex flex-wrap justify-center gap-5">
                     {categories.map((category, index) => (
-                        <CustomLink
-                            href=""
-                            key={category}
+                        <Button
+                            key={index}
                             title={category}
-                            // variant={index === 0 ? "default" : "outline"}
-                            className={index === 0 ? "btn-primary" : ""}
+                            onClick={() => CategoryChangeHandler(category)}
+                            className={category === activeCategory ? "btn-primary" : ""}
                         />
                     ))}
                 </div>
@@ -132,10 +139,6 @@ const Blog = () => {
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                                    {/* <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                                        Read More
-                                        <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                    </Button> */}
                                     <CustomLink href="" title="Read More" className="btn-primary" />
                                 </div>
                             </div>
@@ -157,8 +160,10 @@ const Blog = () => {
                             placeholder="Enter your email"
                             className="flex-1 px-4 py-2 rounded-full bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary"
                         />
-                        {/* <Button className="btn-primary">Subscribe</Button> */}
-                        <CustomLink href="" title="Subscribe" className="btn-primary" />
+                        <Button
+                            title="Get Started"
+                            className="btn-primary"
+                        />
                     </div>
                 </div>
             </section>

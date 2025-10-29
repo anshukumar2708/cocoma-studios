@@ -1,25 +1,30 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import * as React from "react";
+import React from "react";
+// import { ArrowRight } from "lucide-react";
 
 interface ButtonProps {
-    href: string;
     title: React.ReactNode;
     className?: string;
+    onClick?: () => void;
+    type?: "button" | "submit" | "reset";
 }
 
-export default function Button({ href, title, className = "" }: ButtonProps) {
+const Button: React.FC<ButtonProps> = ({
+    title,
+    className = "",
+    onClick,
+    type = "button",
+}) => {
     return (
-        <Link href={href}>
-            <button
-                className={`group flex justify-center items-center ${className}`}
-                type="button"
-            >
-                {title}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-        </Link>
+        <button
+            type={type}
+            onClick={onClick}
+            className={`group flex justify-center items-center  ${className}`}
+        >
+            {title}
+        </button>
     );
-}
+};
+
+export default Button;
