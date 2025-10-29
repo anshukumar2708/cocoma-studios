@@ -12,11 +12,10 @@ import {
 } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import Button from "@/components/ui/Button";
 import MapComponent from "@/components/MapComponent";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import CustomLink from "@/components/ui/CustomLink";
 
 // Define a type for form data
 interface ContactFormData {
@@ -29,7 +28,6 @@ interface ContactFormData {
 }
 
 const Contact: React.FC = () => {
-    const { toast } = useToast();
 
     // Typed state
     const [formData, setFormData] = useState<ContactFormData>({
@@ -51,10 +49,6 @@ const Contact: React.FC = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-        toast({
-            title: "Message Sent!",
-            description: "We'll get back to you within 24 hours.",
-        });
         setFormData({
             name: "",
             email: "",
@@ -206,7 +200,7 @@ const Contact: React.FC = () => {
                                 />
                             </div>
                             <div className="mt-5">
-                                <Button href="" title="Send Message" className="btn-primary w-full" />
+                                <CustomLink href="" title="Send Message" className="btn-primary w-full" />
                                 {/* <Send className="mr-2 w-5 h-5" />
                                 Send Message
                             </Button> */}

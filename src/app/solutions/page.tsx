@@ -1,7 +1,7 @@
-import Button from "@/components/ui/Button";
 import HeroSection from "@/components/ui/HeroSection";
 import { TrendingUp, Music, Film, Shield, CheckCircle2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Solutions = () => {
     const solutions = [
@@ -85,7 +85,7 @@ const Solutions = () => {
                             <h2 className="text-4xl font-bold mb-4">{solution.title}</h2>
                             <p className="text-xl text-muted-foreground mb-6">{solution.description}</p>
                             <p className="text-muted-foreground mb-8">{solution.benefits}</p>
-                            <Button href="/contact" title="Get Started" className="btn-primary" />
+                            <CustomLink href="/contact" title="Get Started" className="btn-primary" />
                         </div>
                         <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} animate-fade-in-right`}>
                             <div className="glass-card">
@@ -144,7 +144,7 @@ const Solutions = () => {
                         <p className="text-xl text-muted-foreground mb-6">
                             Let&apos;s discuss how our tailored solutions can accelerate your success
                         </p>
-                        <Button href="/contact" title="Schedule a Consultation" className="btn-primary" />
+                        <CustomLink href="/contact" title="Schedule a Consultation" className="btn-primary" />
                     </div>
                 </div>
             </section>

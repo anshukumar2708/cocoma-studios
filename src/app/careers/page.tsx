@@ -1,8 +1,8 @@
 import { Briefcase, MapPin, Clock, Heart, Users, Zap, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import Button from "@/components/ui/Button";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Careers = () => {
     const positions = [
@@ -144,7 +144,7 @@ const Careers = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <Button href="/hiring" title=" Apply Now" className="btn-primary" />
+                                <CustomLink href="/hiring" title=" Apply Now" className="btn-primary" />
                             </div>
                         </Card>
                     ))}
@@ -183,7 +183,7 @@ const Careers = () => {
                     <p className="text-xl text-muted-foreground mb-6">
                         We&apos;re always looking for talented individuals. Send us your portfolio!
                     </p>
-                    <Button href="/hiring" title="Submit General Application" className="btn-primary" />
+                    <CustomLink href="/hiring" title="Submit General Application" className="btn-primary" />
                 </div>
             </section>
         </div>

@@ -1,8 +1,8 @@
 import { Calendar, User } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import Button from "@/components/ui/Button";
 import heroBg from "@/assets/hero-bg.jpg";
 import HeroSection from "@/components/ui/HeroSection";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Blog = () => {
     const posts = [
@@ -89,7 +89,7 @@ const Blog = () => {
             <section className="section-container">
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {categories.map((category, index) => (
-                        <Button
+                        <CustomLink
                             href=""
                             key={category}
                             title={category}
@@ -136,7 +136,7 @@ const Blog = () => {
                                         Read More
                                         <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Button> */}
-                                    <Button href="" title="Read More" className="btn-primary" />
+                                    <CustomLink href="" title="Read More" className="btn-primary" />
                                 </div>
                             </div>
                         </Card>
@@ -158,7 +158,7 @@ const Blog = () => {
                             className="flex-1 px-4 py-2 rounded-full bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                         {/* <Button className="btn-primary">Subscribe</Button> */}
-                        <Button href="" title="Subscribe" className="btn-primary" />
+                        <CustomLink href="" title="Subscribe" className="btn-primary" />
                     </div>
                 </div>
             </section>

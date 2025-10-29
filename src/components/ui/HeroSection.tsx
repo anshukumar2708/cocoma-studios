@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import Button from "./Button";
 import { usePathname } from "next/navigation";
+import CustomLink from "./CustomLink";
 
 interface HeroSectionProps {
     heroBg: string | StaticImageData;
@@ -62,14 +62,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         {primaryBtn && (
-                            <Button
+                            <CustomLink
                                 href={primaryBtn.href}
                                 title={primaryBtn.title}
                                 className="btn-primary"
                             />
                         )}
                         {secondaryBtn && (
-                            <Button
+                            <CustomLink
                                 href={secondaryBtn.href}
                                 title={secondaryBtn.title}
                                 className="btn-secondary"

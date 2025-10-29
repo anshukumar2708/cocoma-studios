@@ -2,8 +2,8 @@ import { Film, Globe, Music, Sparkles, CheckCircle2, TrendingUp, Shield } from "
 import heroBg from "@/assets/hero-bg.jpg";
 import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
 import HeroSection from "@/components/ui/HeroSection";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Home = () => {
   const services = [
@@ -71,7 +71,7 @@ const Home = () => {
         </div>
 
         <div className="w-full flex justify-center items-center mt-12">
-          <Button href="/services" title="View All Services" className="btn-primary" />
+          <CustomLink href="/services" title="View All Services" className="btn-primary" />
         </div>
       </section>
 
@@ -142,8 +142,8 @@ const Home = () => {
               Let&apos;s collaborate to create something extraordinary. Contact us today to discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" title="Start Your Project" className="btn-primary" />
-              <Button href="/work" title="View Our Work" className="btn-secondary" />
+              <CustomLink href="/contact" title="Start Your Project" className="btn-primary" />
+              <CustomLink href="/work" title="View Our Work" className="btn-secondary" />
             </div>
           </div>
         </div>
