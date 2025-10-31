@@ -95,7 +95,7 @@ const BlogDetail = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen">
             {/* Hero Section */}
             <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
                 <div className="absolute inset-0">
@@ -121,7 +121,7 @@ const BlogDetail = () => {
                             {blogPost.category}
                         </span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl" data-aos="fade-up" data-aos-delay="100">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-8" data-aos="fade-up" data-aos-delay="100">
                         {blogPost.title}
                     </h1>
                     <div className="flex flex-wrap items-center gap-6 text-white/80" data-aos="fade-up" data-aos-delay="200">
@@ -188,12 +188,16 @@ const BlogDetail = () => {
                                 case 'image':
                                     return (
                                         <figure key={index} className="my-12" data-aos="zoom-in">
-                                            {block.url && <Image
-                                                src={block.url}
-                                                alt={block.caption}
-                                                fill
-                                                className="w-full rounded-xl shadow-2xl"
-                                            />}
+
+                                            {block.url && (
+                                                <Image
+                                                    src={block.url}
+                                                    alt={block.caption || "blog image"}
+                                                    width={1200}
+                                                    height={600}
+                                                    className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                                                />
+                                            )}
                                             {block.caption && (
                                                 <figcaption className="text-center text-muted-foreground mt-4 text-sm">
                                                     {block.caption}
@@ -318,31 +322,6 @@ const BlogDetail = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Newsletter Section */}
-            <section className="section-container" data-aos="fade-up">
-                <div className="max-w-4xl mx-auto bg-gradient-to-r from-card to-card/50 rounded-2xl p-8 md:p-12 border border-border">
-                    <div className="text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                            Stay <span className="gradient-text">Updated</span>
-                        </h2>
-                        <p className="text-muted-foreground mb-8 text-lg">
-                            Subscribe to our newsletter for the latest insights, tips, and industry news.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 px-6 py-4 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
-                            />
-                            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-lg whitespace-nowrap">
-                                Subscribe Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     );
 };

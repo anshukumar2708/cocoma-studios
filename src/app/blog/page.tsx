@@ -186,7 +186,7 @@ const Blog = () => {
 
                                 <div className="flex items-center justify-between">
                                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                                    <CustomLink href={`/blog-details`} title="Read More" className="btn-primary" />
+                                    <CustomLink href={`/blog/${post?.slug}`} title="Read More" className="btn-primary" />
                                 </div>
                             </div>
                         </Card>
