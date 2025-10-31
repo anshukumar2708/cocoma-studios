@@ -67,7 +67,7 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24;
   }
 
   .gradient-text {

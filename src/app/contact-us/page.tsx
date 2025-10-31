@@ -13,8 +13,6 @@ import {
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import MapComponent from "@/components/MapComponent";
-import HeroSection from "@/components/ui/HeroSection";
-import heroBg from "@/assets/hero-bg.jpg";
 import CustomLink from "@/components/ui/CustomLink";
 
 // Define a type for form data
@@ -69,51 +67,6 @@ const Contact: React.FC = () => {
 
     return (
         <div className="min-h-screen">
-
-            {/* Hero Section */}
-            <HeroSection
-                heroBg={heroBg}
-                title="Get in"
-                highlightedText="Touch"
-                subtitle="Comprehensive post-production and localisation solutions powered by AI technology and human expertise"
-            />
-
-            {/* Contact Info Cards */}
-            <section className="section-container">
-                <div className="grid sm:grid-cols-3 gap-6 mb-16">
-                    <Card className="glass-card hover-lift text-center">
-                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                            <Mail className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="font-semibold mb-2">Email Us</h3>
-                        <p className="text-sm text-muted-foreground">
-                            info@cocomastudios.com
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                            support@cocomastudios.com
-                        </p>
-                    </Card>
-
-                    <Card className="glass-card hover-lift text-center">
-                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                            <Phone className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="font-semibold mb-2">Call Us</h3>
-                        <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
-                        <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm PST</p>
-                    </Card>
-
-                    <Card className="glass-card hover-lift text-center">
-                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                            <MapPin className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="font-semibold mb-2">Visit Us</h3>
-                        <p className="text-sm text-muted-foreground">123 Studio Lane</p>
-                        <p className="text-sm text-muted-foreground">Los Angeles, CA 90028</p>
-                    </Card>
-                </div>
-            </section>
-
             {/* Contact Form */}
             <section className="section-container">
                 <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -274,6 +227,42 @@ const Contact: React.FC = () => {
                     <MapComponent lat={21.1721808} lng={81.2957429} zoom={12} />
                 </div>
                 {/* </Card> */}
+            </section>
+
+            {/* Contact Info Cards */}
+            <section className="section-container">
+                <div className="grid sm:grid-cols-3 gap-6 mb-16">
+                    <Card className="glass-card hover-lift text-center">
+                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <Mail className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="font-semibold mb-2">Email Us</h3>
+                        <p className="text-sm text-muted-foreground">
+                            info@cocomastudios.com
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                            support@cocomastudios.com
+                        </p>
+                    </Card>
+
+                    <Card className="glass-card hover-lift text-center">
+                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <Phone className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="font-semibold mb-2">Call Us</h3>
+                        <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                        <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm PST</p>
+                    </Card>
+
+                    <Card className="glass-card hover-lift text-center">
+                        <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <MapPin className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="font-semibold mb-2">Visit Us</h3>
+                        <p className="text-sm text-muted-foreground">123 Studio Lane</p>
+                        <p className="text-sm text-muted-foreground">Los Angeles, CA 90028</p>
+                    </Card>
+                </div>
             </section>
         </div>
     );
