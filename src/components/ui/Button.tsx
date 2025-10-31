@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-// import { ArrowRight } from "lucide-react";
 
 interface ButtonProps {
     title: React.ReactNode;
+    icon?: React.ElementType;
     className?: string;
     onClick?: () => void;
     type?: "button" | "submit" | "reset";
@@ -12,6 +12,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
     title,
+    icon: Icon,
     className = "",
     onClick,
     type = "button",
@@ -20,9 +21,10 @@ const Button: React.FC<ButtonProps> = ({
         <button
             type={type}
             onClick={onClick}
-            className={`group flex justify-center items-center  ${className}`}
+            className={`group flex items-center gap-2 justify-center ${className}`}
         >
-            {title}
+            {Icon && <Icon className="w-6 h-6" />}
+            <span>{title}</span>
         </button>
     );
 };

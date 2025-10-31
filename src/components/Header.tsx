@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import logo from "../assets/logo.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +30,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Sparkles className="w-10 h-10 text-primary group-hover:animate-glow transition-all" />
+            {/* <Sparkles className="w-10 h-10 text-primary group-hover:animate-glow transition-all" /> */}
+            <Image src={logo} className='w-10 h-10' alt='logo' />
             <span className="text-3xl font-bold gradient-text">Cocoma Studios</span>
           </Link>
 

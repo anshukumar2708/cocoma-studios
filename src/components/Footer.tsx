@@ -1,5 +1,7 @@
-import { Sparkles, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import logo from "../assets/logo.svg";
 
 const Footer = () => {
   const services = [
@@ -28,28 +30,47 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <Sparkles className="w-6 h-6 text-primary group-hover:animate-glow" />
+              <Image src={logo} className='w-8 h-8' alt='logo' />
               <span className="text-xl font-bold gradient-text">Cocoma Studios</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               AI-powered International Post-Production and Localisation Company
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors">
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors">
+              </Link>
+
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors">
+              </Link>
+
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors">
+              </Link>
+
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors">
+              </Link>
+
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Youtube className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -107,8 +128,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Cocoma Studios. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import Button from "./Button";
+import { LucideIcon } from "lucide-react";
 
 type TabItem = {
     label: string;
     slug: string;
+    icon: LucideIcon;
 };
 
 interface TabsProps {
@@ -16,27 +19,18 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
 
     return (
         <div className="w-full">
-            {/* Tabs Header */}
             <div
-                className="flex flex-wrap justify-center gap-4 rounded-xl p-2"
+                className="flex flex-wrap justify-center gap-8 rounded-xl p-1.5"
                 style={{ backgroundColor: "hsl(var(--muted))" }}
             >
                 {tabs.map((tab) => (
-                    <button
+                    <Button
                         key={tab.slug}
+                        icon={tab.icon}
+                        title={tab.label}
                         onClick={() => setActiveTab(tab.slug)}
-                        className={`relative px-6 py-3 text-sm sm:text-base font-medium rounded-lg transition-all duration-300
-                         ${activeTab === tab.slug
-                                ? "text-white shadow-md"
-                                : "text-gray-300 hover:text-white hover:bg-[hsl(265_75%_60%_/_.2)]"
-                            }`}
-                        style={{
-                            backgroundColor:
-                                activeTab === tab.slug ? "hsl(265 75% 60%)" : "transparent",
-                        }}
-                    >
-                        {tab.label}
-                    </button>
+                        className={`${activeTab === tab.slug ? "btn-click" : ""}`}
+                    />
                 ))}
             </div>
         </div>

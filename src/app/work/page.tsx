@@ -1,3 +1,5 @@
+"use client";
+
 import WorkCard from "@/components/WorkCard";
 import postProductionImg from "@/assets/post-production.jpg";
 import localizationImg from "@/assets/localization.jpg";
@@ -5,14 +7,20 @@ import musicVideoImg from "@/assets/music-video.jpg";
 import Tabs from "@/components/ui/tabs";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import {
+    Film,
+    Video,
+    Globe,
+    Music,
+} from "lucide-react";
 
 const Work = () => {
 
     const tabsData = [
-        { slug: "visual", label: "Visual Promotion" },
-        { slug: "post", label: "Post-Production" },
-        { slug: "localisation", label: "Localisation" },
-        { slug: "music", label: "Music Videos" },
+        { slug: "visual", label: "Visual Promotion", icon: Film },
+        { slug: "post", label: "Post-Production", icon: Video },
+        { slug: "localisation", label: "Localisation", icon: Globe },
+        { slug: "music", label: "Music Videos", icon: Music },
     ];
 
     const visualPromotionWorks = [
