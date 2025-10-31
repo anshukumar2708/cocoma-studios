@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   const services = [
@@ -30,8 +30,8 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <Image src={logo} className='w-8 h-8' alt='logo' />
-              <span className="text-xl font-bold gradient-text">Cocoma Studios</span>
+              <Image src={logo} className='w-32 h-22' alt='logo' />
+              {/* <span className="text-xl font-bold gradient-text">Cocoma Studios</span> */}
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               AI-powered International Post-Production and Localisation Company

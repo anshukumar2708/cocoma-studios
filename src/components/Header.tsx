@@ -30,8 +30,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            {/* <Sparkles className="w-10 h-10 text-primary group-hover:animate-glow transition-all" /> */}
-            <Image src={logo} className='w-10 h-10' alt='logo' />
+            <Image src={logo} className='w-12 h-12' alt='logo' />
             <span className="text-3xl font-bold gradient-text">Cocoma Studios</span>
           </Link>
 
