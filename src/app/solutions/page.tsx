@@ -4,10 +4,12 @@ import heroBg from "@/assets/hero-bg.jpg";
 import CustomLink from "@/components/ui/CustomLink";
 
 const Solutions = () => {
+
     const solutions = [
         {
             icon: TrendingUp,
             title: "OTT / Streaming Platforms",
+            slug: "ott-streaming-platforms",
             description: "Scalable content solutions for streaming services",
             features: [
                 "High-volume content processing",
@@ -17,11 +19,13 @@ const Solutions = () => {
                 "Fast turnaround times",
                 "Custom metadata management",
             ],
-            benefits: "Launch content globally with confidence. Our AI-powered workflows handle large volumes while maintaining consistent quality across all deliverables.",
+            benefits:
+                "Launch content globally with confidence. Our AI-powered workflows handle large volumes while maintaining consistent quality across all deliverables.",
         },
         {
             icon: Music,
             title: "Music Labels & Creators",
+            slug: "music-labels-creators",
             description: "Creative video production for music industry",
             features: [
                 "Music video editing and production",
@@ -31,11 +35,13 @@ const Solutions = () => {
                 "Behind-the-scenes content",
                 "Multi-platform optimization",
             ],
-            benefits: "Elevate your music with stunning visuals. From concept to final delivery, we create content that amplifies your artistic vision and engages your audience.",
+            benefits:
+                "Elevate your music with stunning visuals. From concept to final delivery, we create content that amplifies your artistic vision and engages your audience.",
         },
         {
             icon: Film,
             title: "Production Houses",
+            slug: "production-houses",
             description: "Complete post-production services",
             features: [
                 "Feature film editing",
@@ -45,11 +51,13 @@ const Solutions = () => {
                 "Trailer and promo creation",
                 "Festival-ready deliverables",
             ],
-            benefits: "Partner with us for world-class post-production. Our experienced team handles everything from rough cut to final delivery, ensuring your vision reaches the screen perfectly.",
+            benefits:
+                "Partner with us for world-class post-production. Our experienced team handles everything from rough cut to final delivery, ensuring your vision reaches the screen perfectly.",
         },
         {
             icon: Shield,
             title: "Media Houses",
+            slug: "media-houses",
             description: "Enterprise-grade media services",
             features: [
                 "News and documentary post-production",
@@ -59,7 +67,35 @@ const Solutions = () => {
                 "White-label solutions",
                 "Dedicated account management",
             ],
-            benefits: "Streamline your media operations with our enterprise solutions. Scalable, secure, and designed to meet the demands of high-volume content production.",
+            benefits:
+                "Streamline your media operations with our enterprise solutions. Scalable, secure, and designed to meet the demands of high-volume content production.",
+        },
+    ];
+
+    const featuresData = [
+        {
+            title: "Industry Expertise",
+            desc: "Deep understanding of sector-specific requirements and workflows",
+        },
+        {
+            title: "Scalable Technology",
+            desc: "AI-powered solutions that grow with your business",
+        },
+        {
+            title: "Flexible Integration",
+            desc: "Seamlessly integrate with your existing systems and processes",
+        },
+        {
+            title: "Dedicated Support",
+            desc: "Account managers and technical support tailored to your needs",
+        },
+        {
+            title: "Cost-Effective",
+            desc: "Optimize your production costs without compromising quality",
+        },
+        {
+            title: "Global Reach",
+            desc: "Serve audiences worldwide with our localization capabilities",
         },
     ];
 
@@ -85,7 +121,10 @@ const Solutions = () => {
                             <h2 className="text-4xl font-bold mb-4">{solution.title}</h2>
                             <p className="text-xl text-muted-foreground mb-6">{solution.description}</p>
                             <p className="text-muted-foreground mb-8">{solution.benefits}</p>
-                            <CustomLink href="/contact" title="Get Started" className="btn-primary" />
+                            <div className="flex justify-start items-center gap-5">
+                                <CustomLink href="/contact-us" title="Get Started" className="btn-primary" />
+                                <CustomLink href={`/solutions/${solution?.slug}`} title="Explore" className="btn-primary" />
+                            </div>
                         </div>
                         <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} animate-fade-in-right`}>
                             <div className="glass-card">
@@ -107,6 +146,7 @@ const Solutions = () => {
             {/* Why Choose Our Solutions */}
             <section className="section-container">
                 <div className="glass-card max-w-5xl mx-auto">
+                    {/* Heading */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold mb-4">Why Choose Our Solutions?</h2>
                         <p className="text-xl text-muted-foreground">
@@ -114,16 +154,14 @@ const Solutions = () => {
                         </p>
                     </div>
 
+                    {/* Features Grid */}
                     <div className="grid md:grid-cols-2 gap-8">
-                        {[
-                            { title: "Industry Expertise", desc: "Deep understanding of sector-specific requirements and workflows" },
-                            { title: "Scalable Technology", desc: "AI-powered solutions that grow with your business" },
-                            { title: "Flexible Integration", desc: "Seamlessly integrate with your existing systems and processes" },
-                            { title: "Dedicated Support", desc: "Account managers and technical support tailored to your needs" },
-                            { title: "Cost-Effective", desc: "Optimize your production costs without compromising quality" },
-                            { title: "Global Reach", desc: "Serve audiences worldwide with our localization capabilities" },
-                        ].map((item, index) => (
-                            <div key={item.title} className="flex gap-4 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                        {featuresData.map((item, index) => (
+                            <div
+                                key={item.title}
+                                className="flex gap-4 animate-fade-in"
+                                style={{ animationDelay: `${index * 50}ms` }}
+                            >
                                 <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                 <div>
                                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>

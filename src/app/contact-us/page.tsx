@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen mt-8">
             {/* Contact Form */}
             <section className="section-container">
                 <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
