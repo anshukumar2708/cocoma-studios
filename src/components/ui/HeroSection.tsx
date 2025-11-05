@@ -65,14 +65,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                             <CustomLink
                                 href={primaryBtn.href}
                                 title={primaryBtn.title}
-                                className="btn-primary"
+                                className="btn-secondary"
                             />
                         )}
                         {secondaryBtn && (
                             <CustomLink
                                 href={secondaryBtn.href}
                                 title={secondaryBtn.title}
-                                className="btn-secondary"
+                                className="btn-primary"
                             />
                         )}
                     </div>

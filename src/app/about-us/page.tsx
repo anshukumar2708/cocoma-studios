@@ -1,21 +1,66 @@
 import { Users, Target, Award, Zap, Heart, Globe2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import HeroSection from "@/components/ui/HeroSection";
+import { Metadata } from "next";
+
+const values = [
+    { icon: Target, title: "Excellence", description: "Delivering world-class quality in every project" },
+    { icon: Zap, title: "Innovation", description: "Pioneering AI-powered production workflows" },
+    { icon: Heart, title: "Passion", description: "Driven by love for storytelling and creativity" },
+    { icon: Globe2, title: "Global Reach", description: "Serving clients worldwide with local expertise" },
+];
+
+const stats = [
+    { number: "500+", label: "Projects Delivered" },
+    { number: "50+", label: "Countries Served" },
+    { number: "100+", label: "Team Members" },
+    { number: "15+", label: "Years Experience" },
+];
+
+export const metadata: Metadata = {
+    title: "About Us | Cocoma Studios – Creative Minds Behind Films, Brands & OTT",
+    description:
+        "Learn about Cocoma Studios, a creative digital agency that blends storytelling, design, and technology to power growth for brands, OTT platforms, and creators. Our team of filmmakers, strategists, and designers craft campaigns that inspire emotion and deliver measurable impact.",
+    keywords: [
+        "About Cocoma Studios",
+        "Cocoma Digital team",
+        "creative agency India",
+        "film marketing experts",
+        "OTT campaign strategy",
+        "digital storytelling agency",
+        "YouTube content marketing",
+        "video production company",
+        "brand communication",
+        "Cocoma Studios team",
+    ],
+    openGraph: {
+        title: "About Cocoma Studios | Meet the Creative Digital Agency Behind the Vision",
+        description:
+            "Discover the story of Cocoma Studios — a team of creators, storytellers, and strategists dedicated to shaping how audiences connect with brands, films, and entertainment online.",
+        url: "https://www.cocomastudios.com/about",
+        siteName: "Cocoma Studios",
+        images: [
+            {
+                url: "/og/about-us-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios – About Us",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Cocoma Studios | The Team Powering Creative Digital Campaigns",
+        description:
+            "Meet the people, passion, and process behind Cocoma Studios — a creative digital agency specializing in brand storytelling and entertainment marketing.",
+        images: ["/og/about-us-banner.jpg"],
+    },
+};
+
 
 const About = () => {
-    const values = [
-        { icon: Target, title: "Excellence", description: "Delivering world-class quality in every project" },
-        { icon: Zap, title: "Innovation", description: "Pioneering AI-powered production workflows" },
-        { icon: Heart, title: "Passion", description: "Driven by love for storytelling and creativity" },
-        { icon: Globe2, title: "Global Reach", description: "Serving clients worldwide with local expertise" },
-    ];
-
-    const stats = [
-        { number: "500+", label: "Projects Delivered" },
-        { number: "50+", label: "Countries Served" },
-        { number: "100+", label: "Team Members" },
-        { number: "15+", label: "Years Experience" },
-    ];
 
     return (
         <div className="min-h-screen">
@@ -103,7 +148,7 @@ const About = () => {
 
             {/* Stats */}
             <section className="section-container">
-                <div className="glass-card">
+                <div className="glass-card py-10">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {stats.map((stat, index) => (
                             <div key={stat.label} className="text-center animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>

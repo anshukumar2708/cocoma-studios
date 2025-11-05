@@ -91,6 +91,7 @@
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply border border-primaryBorder px-8 py-3 rounded-full flex items-center gap-2 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-primary-foreground font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg;
   }
+  
 }
