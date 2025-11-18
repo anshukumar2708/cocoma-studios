@@ -93,6 +93,7 @@ const Home = () => {
       {/* Hero Section */}
       <HeroSection
         heroBg={heroBg}
+        videoUrl=""
         highlightedText="AI-Powered"
         title="Post-Production Excellence"
         subtitle="International Post-Production and Localisation Company delivering cinematic quality across all platforms"
