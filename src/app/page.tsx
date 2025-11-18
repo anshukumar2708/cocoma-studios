@@ -98,7 +98,7 @@ const Home = () => {
         title="Post-Production Excellence"
         subtitle="International Post-Production and Localisation Company delivering cinematic quality across all platforms"
         primaryBtn={{ href: "/services", title: "Explore Services" }}
-        secondaryBtn={{ href: "/contact", title: "Get in Touch" }}
+        secondaryBtn={{ href: "/contact-us", title: "Get in Touch" }}
       />
 
       {/* Services Overview */}

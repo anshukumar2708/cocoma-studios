@@ -223,7 +223,7 @@ const Solutions = () => {
             <CallToAction
                 title="Ready to Transform Your Workflow?"
                 description="Let&apos;s discuss how our tailored solutions can accelerate your success"
-                primaryLink={{ href: "/contact", title: "Schedule a Consultation" }}
+                primaryLink={{ href: "/contact-us", title: "Schedule a Consultation" }}
             />
 
         </div>

@@ -232,7 +232,7 @@ const Blog = () => {
             <CallToAction
                 title="Stay Updated"
                 description="Subscribe to our newsletter for the latest insights and tutorials"
-                primaryLink={{ href: "/contact", title: "Get Started" }}
+                primaryLink={{ href: "/contact-us", title: "Get Started" }}
             />
         </div>
     );
