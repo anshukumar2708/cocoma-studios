@@ -1,133 +1,183 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { CallToAction } from "@/components/ui/ctaSection";
+import { Metadata } from "next";
+
+const workflowSteps = [
+    {
+        title: "Ingest & Upload",
+        desc: "Seamlessly upload large media files with real-time progress tracking and automatic metadata tagging.",
+        img: "https://images.pexels.com/photos/5553059/pexels-photo-5553059.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
+    {
+        title: "AI Localization",
+        desc: "Use our AI-powered localization suite to generate accurate subtitles, dubbing, and translations for 20+ languages.",
+        img: "https://images.pexels.com/photos/8437004/pexels-photo-8437004.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
+    {
+        title: "Quality Assurance",
+        desc: "Automated frame-by-frame validation ensures your content meets the highest broadcast standards before going live.",
+        img: "https://images.pexels.com/photos/4792736/pexels-photo-4792736.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
+    {
+        title: "Global Distribution",
+        desc: "Deliver OTT-ready content worldwide through cloud-based distribution networks optimized for latency-free streaming.",
+        img: "https://images.pexels.com/photos/3944406/pexels-photo-3944406.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
+];
+
+
+const testimonials = [
+    {
+        name: "Samantha Lee",
+        role: "Head of Production, CineWave Studios",
+        img: "https://randomuser.me/api/portraits/women/45.jpg",
+        quote:
+            "Cocoma Studios’ AI automation helped us reduce turnaround times by over 50%. A must-have for any streaming workflow.",
+        rating: 5,
+    },
+    {
+        name: "David Chen",
+        role: "Content Director, StreamVerse",
+        img: "https://randomuser.me/api/portraits/men/46.jpg",
+        quote:
+            "Their localization system is unmatched. Our multi-language content reached audiences we never thought possible.",
+        rating: 5,
+    },
+    {
+        name: "Maria Gomez",
+        role: "Executive Producer, Nova Entertainment",
+        img: "https://randomuser.me/api/portraits/women/47.jpg",
+        quote:
+            "Incredible automation and support. Their real-time QA saved us hours per project, maintaining premium quality output.",
+        rating: 5,
+    },
+    {
+        name: "James Patel",
+        role: "Streaming Tech Lead, VisionPlay",
+        img: "https://randomuser.me/api/portraits/men/49.jpg",
+        quote:
+            "Cocoma’s streaming delivery network is lightning fast. Our global audience engagement has skyrocketed.",
+        rating: 5,
+    },
+    {
+        name: "Olivia Brooks",
+        role: "Digital Media Manager, AuroraTV",
+        img: "https://randomuser.me/api/portraits/women/60.jpg",
+        quote:
+            "Their analytics dashboard gave us deep insights into viewer behavior, helping us refine our content strategy.",
+        rating: 5,
+    },
+];
+
+const exploreSections = [
+    {
+        title: "Content Delivery Optimization",
+        desc: "Deliver seamless playback across devices using adaptive bitrate streaming (ABR) and intelligent content routing. Our infrastructure minimizes buffering and ensures high-quality delivery for every bandwidth condition.",
+        img: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        points: [
+            "🚀 Adaptive streaming for any network condition",
+            "🌍 Global CDN integration with low latency",
+            "📦 Real-time bandwidth optimization",
+            "🔁 Redundant routing for uptime reliability",
+        ],
+    },
+    {
+        title: "Security & Compliance",
+        desc: "Protect your content with studio-grade security. Our platform is compliant with major DRM standards and encryption protocols, safeguarding your IP from unauthorized access.",
+        img: "https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        points: [
+            "🔒 AES-256 encryption for all assets",
+            "🧩 DRM integration (Widevine, FairPlay, PlayReady)",
+            "👁️ Real-time watermarking for anti-piracy",
+            "⚖️ GDPR & ISO 27001 compliance certified",
+        ],
+    },
+    {
+        title: "Monetization & Analytics",
+        desc: "Boost revenue with flexible monetization models and deep audience insights. Our analytics dashboard helps you understand viewer behavior, engagement, and ROI in real time.",
+        img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        points: [
+            "💰 Support for AVOD, SVOD, and TVOD",
+            "📊 Real-time viewer analytics and retention tracking",
+            "🎯 Predictive insights powered by machine learning",
+            "🧠 Content performance heatmaps",
+        ],
+    },
+    {
+        title: "AI-Powered Recommendations",
+        desc: "Personalize user experiences with AI-driven recommendation engines that analyze viewing behavior, genre preferences, and trending content across demographics.",
+        img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        points: [
+            "🤖 Smart recommendation algorithms",
+            "📈 Continuous learning with real-time user data",
+            "🎬 Personalized watchlists for every viewer",
+            "💡 Boost engagement and retention rates",
+        ],
+    },
+    {
+        title: "Seamless Multi-Device Streaming",
+        desc: "Deliver smooth, synchronized viewing experiences across TV, mobile, and desktop platforms with automatic resolution scaling and device-aware optimization.",
+        img: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        points: [
+            "📱 Cross-device playback optimization",
+            "💻 Automatic resolution scaling",
+            "🖥️ Smart adaptive encoding per device type",
+            "🌐 Consistent UI across all screen sizes",
+        ],
+    },
+];
+
+export const metadata: Metadata = {
+    title: "Explore | Cocoma Studios – AI Streaming Workflow, Localization & OTT Solutions",
+    description:
+        "Explore powerful AI-driven streaming solutions by Cocoma Studios. From ingestion and localization to global delivery, analytics, monetization, and multi-device optimization — discover the end-to-end workflow designed for modern OTT platforms.",
+
+    keywords: [
+        "Cocoma Studios explore",
+        "OTT workflow automation",
+        "AI localization tools",
+        "video ingestion system",
+        "streaming optimization",
+        "content delivery network",
+        "DRM and content security",
+        "viewer analytics",
+        "OTT monetization models",
+        "AI recommendation engine",
+        "multi-device streaming"
+    ],
+
+    openGraph: {
+        title:
+            "Explore | Cocoma Studios – AI Streaming Workflow, Localization, Analytics & Delivery",
+        description:
+            "Dive into Cocoma Studios’ end-to-end AI-powered streaming ecosystem. Ingest, localize, secure, analyze, and distribute content globally with cutting-edge automation and cloud delivery systems.",
+        url: "https://www.cocomastudios.com/explore",
+        siteName: "Cocoma Studios",
+        images: [
+            {
+                url: "/og/explore-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios Explore Page – AI Workflow & OTT Solutions"
+            }
+        ],
+        locale: "en_US",
+        type: "website"
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Explore Cocoma Studios – AI-Powered Streaming Workflow, Localization & OTT Automation",
+        description:
+            "Discover the complete streaming pipeline from ingestion to global delivery — powered by AI localization, analytics, security, and multi-device optimization.",
+        images: ["/og/explore-banner.jpg"]
+    }
+};
+
 
 export default function ExplorePage() {
-
-    const workflowSteps = [
-        {
-            title: "Ingest & Upload",
-            desc: "Seamlessly upload large media files with real-time progress tracking and automatic metadata tagging.",
-            img: "https://images.pexels.com/photos/5553059/pexels-photo-5553059.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        },
-        {
-            title: "AI Localization",
-            desc: "Use our AI-powered localization suite to generate accurate subtitles, dubbing, and translations for 20+ languages.",
-            img: "https://images.pexels.com/photos/8437004/pexels-photo-8437004.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        },
-        {
-            title: "Quality Assurance",
-            desc: "Automated frame-by-frame validation ensures your content meets the highest broadcast standards before going live.",
-            img: "https://images.pexels.com/photos/4792736/pexels-photo-4792736.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        },
-        {
-            title: "Global Distribution",
-            desc: "Deliver OTT-ready content worldwide through cloud-based distribution networks optimized for latency-free streaming.",
-            img: "https://images.pexels.com/photos/3944406/pexels-photo-3944406.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        },
-    ];
-
-
-    const testimonials = [
-        {
-            name: "Samantha Lee",
-            role: "Head of Production, CineWave Studios",
-            img: "https://randomuser.me/api/portraits/women/45.jpg",
-            quote:
-                "Cocoma Studios’ AI automation helped us reduce turnaround times by over 50%. A must-have for any streaming workflow.",
-            rating: 5,
-        },
-        {
-            name: "David Chen",
-            role: "Content Director, StreamVerse",
-            img: "https://randomuser.me/api/portraits/men/46.jpg",
-            quote:
-                "Their localization system is unmatched. Our multi-language content reached audiences we never thought possible.",
-            rating: 5,
-        },
-        {
-            name: "Maria Gomez",
-            role: "Executive Producer, Nova Entertainment",
-            img: "https://randomuser.me/api/portraits/women/47.jpg",
-            quote:
-                "Incredible automation and support. Their real-time QA saved us hours per project, maintaining premium quality output.",
-            rating: 5,
-        },
-        {
-            name: "James Patel",
-            role: "Streaming Tech Lead, VisionPlay",
-            img: "https://randomuser.me/api/portraits/men/49.jpg",
-            quote:
-                "Cocoma’s streaming delivery network is lightning fast. Our global audience engagement has skyrocketed.",
-            rating: 5,
-        },
-        {
-            name: "Olivia Brooks",
-            role: "Digital Media Manager, AuroraTV",
-            img: "https://randomuser.me/api/portraits/women/60.jpg",
-            quote:
-                "Their analytics dashboard gave us deep insights into viewer behavior, helping us refine our content strategy.",
-            rating: 5,
-        },
-    ];
-
-    const exploreSections = [
-        {
-            title: "Content Delivery Optimization",
-            desc: "Deliver seamless playback across devices using adaptive bitrate streaming (ABR) and intelligent content routing. Our infrastructure minimizes buffering and ensures high-quality delivery for every bandwidth condition.",
-            img: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            points: [
-                "🚀 Adaptive streaming for any network condition",
-                "🌍 Global CDN integration with low latency",
-                "📦 Real-time bandwidth optimization",
-                "🔁 Redundant routing for uptime reliability",
-            ],
-        },
-        {
-            title: "Security & Compliance",
-            desc: "Protect your content with studio-grade security. Our platform is compliant with major DRM standards and encryption protocols, safeguarding your IP from unauthorized access.",
-            img: "https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            points: [
-                "🔒 AES-256 encryption for all assets",
-                "🧩 DRM integration (Widevine, FairPlay, PlayReady)",
-                "👁️ Real-time watermarking for anti-piracy",
-                "⚖️ GDPR & ISO 27001 compliance certified",
-            ],
-        },
-        {
-            title: "Monetization & Analytics",
-            desc: "Boost revenue with flexible monetization models and deep audience insights. Our analytics dashboard helps you understand viewer behavior, engagement, and ROI in real time.",
-            img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            points: [
-                "💰 Support for AVOD, SVOD, and TVOD",
-                "📊 Real-time viewer analytics and retention tracking",
-                "🎯 Predictive insights powered by machine learning",
-                "🧠 Content performance heatmaps",
-            ],
-        },
-        {
-            title: "AI-Powered Recommendations",
-            desc: "Personalize user experiences with AI-driven recommendation engines that analyze viewing behavior, genre preferences, and trending content across demographics.",
-            img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            points: [
-                "🤖 Smart recommendation algorithms",
-                "📈 Continuous learning with real-time user data",
-                "🎬 Personalized watchlists for every viewer",
-                "💡 Boost engagement and retention rates",
-            ],
-        },
-        {
-            title: "Seamless Multi-Device Streaming",
-            desc: "Deliver smooth, synchronized viewing experiences across TV, mobile, and desktop platforms with automatic resolution scaling and device-aware optimization.",
-            img: "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            points: [
-                "📱 Cross-device playback optimization",
-                "💻 Automatic resolution scaling",
-                "🖥️ Smart adaptive encoding per device type",
-                "🌐 Consistent UI across all screen sizes",
-            ],
-        },
-    ];
 
     return (
         <div className="min-h-screen">

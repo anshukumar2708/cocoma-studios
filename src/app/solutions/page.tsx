@@ -3,106 +3,151 @@ import { TrendingUp, Music, Film, Shield, CheckCircle2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import CustomLink from "@/components/ui/CustomLink";
 import { CallToAction } from "@/components/ui/ctaSection";
+import { Metadata } from "next";
+
+const solutions = [
+    {
+        icon: TrendingUp,
+        title: "OTT / Streaming Platforms",
+        slug: "ott-streaming-platforms",
+        description: "Scalable content solutions for streaming services",
+        features: [
+            "High-volume content processing",
+            "Multi-language localization at scale",
+            "Automated workflow integration",
+            "Quality assurance systems",
+            "Fast turnaround times",
+            "Custom metadata management",
+        ],
+        benefits:
+            "Launch content globally with confidence. Our AI-powered workflows handle large volumes while maintaining consistent quality across all deliverables.",
+    },
+    {
+        icon: Music,
+        title: "Music Labels & Creators",
+        slug: "music-labels-creators",
+        description: "Creative video production for music industry",
+        features: [
+            "Music video editing and production",
+            "Album and single artwork design",
+            "Social media content creation",
+            "Lyric video production",
+            "Behind-the-scenes content",
+            "Multi-platform optimization",
+        ],
+        benefits:
+            "Elevate your music with stunning visuals. From concept to final delivery, we create content that amplifies your artistic vision and engages your audience.",
+    },
+    {
+        icon: Film,
+        title: "Production Houses",
+        slug: "production-houses",
+        description: "Complete post-production services",
+        features: [
+            "Feature film editing",
+            "Sound design and mixing",
+            "Color grading and DI",
+            "VFX and motion graphics",
+            "Trailer and promo creation",
+            "Festival-ready deliverables",
+        ],
+        benefits:
+            "Partner with us for world-class post-production. Our experienced team handles everything from rough cut to final delivery, ensuring your vision reaches the screen perfectly.",
+    },
+    {
+        icon: Shield,
+        title: "Media Houses",
+        slug: "media-houses",
+        description: "Enterprise-grade media services",
+        features: [
+            "News and documentary post-production",
+            "Multi-platform content adaptation",
+            "Real-time collaboration tools",
+            "Secure content management",
+            "White-label solutions",
+            "Dedicated account management",
+        ],
+        benefits:
+            "Streamline your media operations with our enterprise solutions. Scalable, secure, and designed to meet the demands of high-volume content production.",
+    },
+];
+
+const featuresData = [
+    {
+        title: "Industry Expertise",
+        desc: "Deep understanding of sector-specific requirements and workflows",
+    },
+    {
+        title: "Scalable Technology",
+        desc: "AI-powered solutions that grow with your business",
+    },
+    {
+        title: "Flexible Integration",
+        desc: "Seamlessly integrate with your existing systems and processes",
+    },
+    {
+        title: "Dedicated Support",
+        desc: "Account managers and technical support tailored to your needs",
+    },
+    {
+        title: "Cost-Effective",
+        desc: "Optimize your production costs without compromising quality",
+    },
+    {
+        title: "Global Reach",
+        desc: "Serve audiences worldwide with our localization capabilities",
+    },
+];
+
+export const metadata: Metadata = {
+    title: "Solutions | Cocoma Studios – AI-Powered Media, Localization & OTT Solutions",
+    description:
+        "Discover Cocoma Studios’ end-to-end solutions for OTT platforms, filmmakers, content creators, and brands. From AI-driven localization to post-production, VFX, metadata generation, and enterprise content workflows — we deliver scalable creative solutions.",
+    keywords: [
+        "Cocoma Studios solutions",
+        "media localization services",
+        "OTT content solutions",
+        "AI post-production tools",
+        "metadata generation",
+        "video editing services",
+        "content delivery solutions",
+        "broadcast solutions",
+        "enterprise media solutions",
+        "Cocoma AI tools",
+    ],
+    openGraph: {
+        title:
+            "Solutions | Cocoma Studios – AI Localization, VFX, Metadata & OTT Content Systems",
+        description:
+            "Explore powerful content solutions by Cocoma Studios — including AI dubbing, subtitling, multi-language localization, editing, VFX, cloud workflows, metadata automation, and scalable delivery for OTT platforms.",
+        url: "https://www.cocomastudios.com/solutions",
+        siteName: "Cocoma Studios",
+        images: [
+            {
+                url: "/og/solutions-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios – Solutions",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Cocoma Studios Solutions | AI Localization, Editing, Metadata & OTT Delivery",
+        description:
+            "Full-suite creative and technical solutions — AI localization, video editing, VFX, color grading, content metadata, and OTT-ready media workflows.",
+        images: ["/og/solutions-banner.jpg"],
+    },
+};
+
 
 const Solutions = () => {
 
-    const solutions = [
-        {
-            icon: TrendingUp,
-            title: "OTT / Streaming Platforms",
-            slug: "ott-streaming-platforms",
-            description: "Scalable content solutions for streaming services",
-            features: [
-                "High-volume content processing",
-                "Multi-language localization at scale",
-                "Automated workflow integration",
-                "Quality assurance systems",
-                "Fast turnaround times",
-                "Custom metadata management",
-            ],
-            benefits:
-                "Launch content globally with confidence. Our AI-powered workflows handle large volumes while maintaining consistent quality across all deliverables.",
-        },
-        {
-            icon: Music,
-            title: "Music Labels & Creators",
-            slug: "music-labels-creators",
-            description: "Creative video production for music industry",
-            features: [
-                "Music video editing and production",
-                "Album and single artwork design",
-                "Social media content creation",
-                "Lyric video production",
-                "Behind-the-scenes content",
-                "Multi-platform optimization",
-            ],
-            benefits:
-                "Elevate your music with stunning visuals. From concept to final delivery, we create content that amplifies your artistic vision and engages your audience.",
-        },
-        {
-            icon: Film,
-            title: "Production Houses",
-            slug: "production-houses",
-            description: "Complete post-production services",
-            features: [
-                "Feature film editing",
-                "Sound design and mixing",
-                "Color grading and DI",
-                "VFX and motion graphics",
-                "Trailer and promo creation",
-                "Festival-ready deliverables",
-            ],
-            benefits:
-                "Partner with us for world-class post-production. Our experienced team handles everything from rough cut to final delivery, ensuring your vision reaches the screen perfectly.",
-        },
-        {
-            icon: Shield,
-            title: "Media Houses",
-            slug: "media-houses",
-            description: "Enterprise-grade media services",
-            features: [
-                "News and documentary post-production",
-                "Multi-platform content adaptation",
-                "Real-time collaboration tools",
-                "Secure content management",
-                "White-label solutions",
-                "Dedicated account management",
-            ],
-            benefits:
-                "Streamline your media operations with our enterprise solutions. Scalable, secure, and designed to meet the demands of high-volume content production.",
-        },
-    ];
-
-    const featuresData = [
-        {
-            title: "Industry Expertise",
-            desc: "Deep understanding of sector-specific requirements and workflows",
-        },
-        {
-            title: "Scalable Technology",
-            desc: "AI-powered solutions that grow with your business",
-        },
-        {
-            title: "Flexible Integration",
-            desc: "Seamlessly integrate with your existing systems and processes",
-        },
-        {
-            title: "Dedicated Support",
-            desc: "Account managers and technical support tailored to your needs",
-        },
-        {
-            title: "Cost-Effective",
-            desc: "Optimize your production costs without compromising quality",
-        },
-        {
-            title: "Global Reach",
-            desc: "Serve audiences worldwide with our localization capabilities",
-        },
-    ];
-
     return (
         <div className="min-h-screen">
-
             {/* Hero Section */}
             <HeroSection
                 heroBg={heroBg}
@@ -180,6 +225,7 @@ const Solutions = () => {
                 description="Let&apos;s discuss how our tailored solutions can accelerate your success"
                 primaryLink={{ href: "/contact", title: "Schedule a Consultation" }}
             />
+
         </div>
     );
 };

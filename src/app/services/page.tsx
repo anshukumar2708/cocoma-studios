@@ -80,7 +80,6 @@ export const metadata: Metadata = {
     },
 };
 
-
 const Services = () => {
 
     return (
