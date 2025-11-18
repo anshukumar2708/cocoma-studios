@@ -220,7 +220,7 @@ const Careers = () => {
                         { step: "04", title: "Offer", description: "Welcome to Cocoma Studios!" },
                     ].map((stage, index) => (
                         <div key={stage.step} className="glass-card text-center animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                            <div className="text-4xl font-bold gradient-text mb-4">{stage.step}</div>
+                            <div className="text-5xl font-bold gradient-text mb-4">{stage.step}</div>
                             <h3 className="text-lg font-semibold mb-2">{stage.title}</h3>
                             <p className="text-sm text-muted-foreground">{stage.description}</p>
                         </div>

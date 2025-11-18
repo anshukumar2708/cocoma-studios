@@ -1,99 +1,143 @@
 import { Calendar, User, Clock, Share2, Bookmark, ArrowLeft, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+const blogPost = {
+    id: 1,
+    title: "The Future of Post-Production: AI and Machine Learning in Film Editing",
+    author: "Sarah Johnson",
+    date: "March 15, 2024",
+    readTime: "8 min read",
+    category: "Post-Production",
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=600&fit=crop",
+    content: [
+        {
+            type: "text",
+            content: "The landscape of post-production is evolving at an unprecedented pace. With the integration of artificial intelligence and machine learning, we're witnessing a revolution that's transforming how films are edited, graded, and finalized. This technological leap isn't just about speed—it's about unlocking creative possibilities that were previously unimaginable."
+        },
+        {
+            type: "heading",
+            content: "AI-Powered Color Grading"
+        },
+        {
+            type: "text",
+            content: "Color grading has always been an art form that requires a keen eye and years of experience. Today, AI algorithms can analyze thousands of frames in seconds, suggesting color palettes that match the mood and tone of each scene. These tools don't replace colorists—they empower them to work faster and explore more creative options."
+        },
+        {
+            type: "image",
+            url: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=600&fit=crop",
+            caption: "AI-powered color grading tools in action"
+        },
+        {
+            type: "heading",
+            content: "Automated Audio Cleanup"
+        },
+        {
+            type: "text",
+            content: "Sound design has also benefited tremendously from machine learning. Modern AI can identify and remove background noise, balance audio levels, and even enhance dialogue clarity—all with minimal human intervention. This allows sound designers to focus on the creative aspects of their work rather than tedious technical tasks."
+        },
+        {
+            type: "video",
+            url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            caption: "Watch: AI in Modern Film Production"
+        },
+        {
+            type: "heading",
+            content: "Smart Scene Detection and Organization"
+        },
+        {
+            type: "text",
+            content: "One of the most time-consuming aspects of post-production is organizing footage. AI-powered scene detection can automatically categorize clips by content, lighting conditions, camera angles, and even emotional tone. This dramatically reduces the time editors spend searching for specific shots."
+        },
+        {
+            type: "quote",
+            content: "AI doesn't replace creativity—it amplifies it. The future of post-production is about humans and machines working in harmony.",
+            author: "James Cameron, Filmmaker"
+        },
+        {
+            type: "text",
+            content: "As we look to the future, it's clear that AI and machine learning will continue to reshape post-production workflows. However, the human touch—the creative vision, emotional intelligence, and artistic sensibility—will always remain irreplaceable. The key is finding the right balance between technological efficiency and creative expression."
+        },
+        {
+            type: "image",
+            url: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200&h=600&fit=crop",
+            caption: "The future of post-production is collaborative"
+        },
+    ],
+    tags: ["AI", "Post-Production", "Film Editing", "Technology", "Future"]
+};
 
-const BlogDetail = () => {
-    // const { id } = useParams();
+const relatedPosts = [
+    {
+        id: 2,
+        title: "5 Essential Tips for Music Video Production",
+        image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=300&fit=crop",
+        category: "Music Video",
+        date: "March 10, 2024"
+    },
+    {
+        id: 3,
+        title: "Localization Best Practices for OTT Platforms",
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop",
+        category: "Localization",
+        date: "March 5, 2024"
+    },
+    {
+        id: 4,
+        title: "The Art of Trailer Editing: Creating Impact",
+        image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=300&fit=crop",
+        category: "Visual Promotion",
+        date: "March 1, 2024"
+    }
+];
 
-    const blogPost = {
-        id: 1,
-        title: "The Future of Post-Production: AI and Machine Learning in Film Editing",
-        author: "Sarah Johnson",
-        date: "March 15, 2024",
-        readTime: "8 min read",
-        category: "Post-Production",
-        image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=600&fit=crop",
-        content: [
+export const metadata: Metadata = {
+    title: "Blog Details | Cocoma Studios – Insights, Filmmaking, OTT & Creative Strategy",
+    description:
+        "Explore in-depth articles on filmmaking, OTT workflows, AI localization, post-production, VFX, creative strategy, and industry insights from Cocoma Studios.",
+    keywords: [
+        "Cocoma Studios blog",
+        "film industry articles",
+        "OTT insights",
+        "content creation tips",
+        "video production blog",
+        "AI localization guides",
+        "VFX tutorials",
+        "editing techniques",
+        "creative strategy",
+        "media technology insights",
+        "Cocoma Studios articles",
+    ],
+    openGraph: {
+        title:
+            "Blog Details | Cocoma Studios – Filmmaking, OTT, VFX & Creative Insights",
+        description:
+            "Read detailed industry insights, deep dives, tutorials, and creative knowledge from Cocoma Studios. Learn about filmmaking, OTT systems, AI workflows, and more.",
+        url: "https://www.cocomastudios.com/blog/details",
+        siteName: "Cocoma Studios",
+        images: [
             {
-                type: "text",
-                content: "The landscape of post-production is evolving at an unprecedented pace. With the integration of artificial intelligence and machine learning, we're witnessing a revolution that's transforming how films are edited, graded, and finalized. This technological leap isn't just about speed—it's about unlocking creative possibilities that were previously unimaginable."
-            },
-            {
-                type: "heading",
-                content: "AI-Powered Color Grading"
-            },
-            {
-                type: "text",
-                content: "Color grading has always been an art form that requires a keen eye and years of experience. Today, AI algorithms can analyze thousands of frames in seconds, suggesting color palettes that match the mood and tone of each scene. These tools don't replace colorists—they empower them to work faster and explore more creative options."
-            },
-            {
-                type: "image",
-                url: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=600&fit=crop",
-                caption: "AI-powered color grading tools in action"
-            },
-            {
-                type: "heading",
-                content: "Automated Audio Cleanup"
-            },
-            {
-                type: "text",
-                content: "Sound design has also benefited tremendously from machine learning. Modern AI can identify and remove background noise, balance audio levels, and even enhance dialogue clarity—all with minimal human intervention. This allows sound designers to focus on the creative aspects of their work rather than tedious technical tasks."
-            },
-            {
-                type: "video",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-                caption: "Watch: AI in Modern Film Production"
-            },
-            {
-                type: "heading",
-                content: "Smart Scene Detection and Organization"
-            },
-            {
-                type: "text",
-                content: "One of the most time-consuming aspects of post-production is organizing footage. AI-powered scene detection can automatically categorize clips by content, lighting conditions, camera angles, and even emotional tone. This dramatically reduces the time editors spend searching for specific shots."
-            },
-            {
-                type: "quote",
-                content: "AI doesn't replace creativity—it amplifies it. The future of post-production is about humans and machines working in harmony.",
-                author: "James Cameron, Filmmaker"
-            },
-            {
-                type: "text",
-                content: "As we look to the future, it's clear that AI and machine learning will continue to reshape post-production workflows. However, the human touch—the creative vision, emotional intelligence, and artistic sensibility—will always remain irreplaceable. The key is finding the right balance between technological efficiency and creative expression."
-            },
-            {
-                type: "image",
-                url: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200&h=600&fit=crop",
-                caption: "The future of post-production is collaborative"
+                url: "/og/blog-details.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios – Blog Details",
             },
         ],
-        tags: ["AI", "Post-Production", "Film Editing", "Technology", "Future"]
-    };
+        locale: "en_US",
+        type: "article",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Blog Details | Cocoma Studios – Filmmaking, Editing, VFX & OTT Knowledge",
+        description:
+            "Explore expert-level blog articles from Cocoma Studios across filmmaking, OTT delivery, AI tools, editing workflows, and more.",
+        images: ["/og/blog-details.jpg"],
+    },
+};
 
-    const relatedPosts = [
-        {
-            id: 2,
-            title: "5 Essential Tips for Music Video Production",
-            image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=300&fit=crop",
-            category: "Music Video",
-            date: "March 10, 2024"
-        },
-        {
-            id: 3,
-            title: "Localization Best Practices for OTT Platforms",
-            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop",
-            category: "Localization",
-            date: "March 5, 2024"
-        },
-        {
-            id: 4,
-            title: "The Art of Trailer Editing: Creating Impact",
-            image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=300&fit=crop",
-            category: "Visual Promotion",
-            date: "March 1, 2024"
-        }
-    ];
 
+const BlogDetail = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
