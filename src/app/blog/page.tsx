@@ -180,7 +180,8 @@ const Blog = () => {
                         <Card
                             key={index}
                             className="glass-card hover-lift group cursor-pointer p-0 overflow-hidden animate-fade-in"
-                            style={{ animationDelay: `${index * 50}ms` }}
+                            // style={{ animationDelay: `${index * 50}ms` }}
+                            data-aos="zoom-in"
                         >
                             {/* Image Section */}
                             <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
