@@ -1,13 +1,9 @@
-"use client"
-// import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import AOSInit from "@/components/AOSInit";
 
 
 const geistSans = localFont({
@@ -21,36 +17,32 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon-180x180.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon-64x64.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico" }
+    ],
+    apple: "/favicon-180x180.png"
+  }
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    // Initialize AOS once on mount
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-      easing: "ease-in-out",
-    });
-
-    // Scroll to top when route changes
-    window.scrollTo(0, 0);
-
-    // Re-refresh AOS animations when path changes
-    AOS.refresh();
-  }, [pathname]);
-
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AOSInit />
         <Header />
         {children}
         <Footer />
