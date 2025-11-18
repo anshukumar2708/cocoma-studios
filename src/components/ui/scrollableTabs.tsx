@@ -3,13 +3,6 @@ import { useRef, useEffect, useState } from "react";
 import {
     ChevronLeft,
     ChevronRight,
-    Tv,
-    Mic,
-    PlayCircle,
-    Car,
-    Grid2X2,
-    Music,
-    Trophy,
 } from "lucide-react";
 
 interface TabItem {
@@ -17,22 +10,7 @@ interface TabItem {
     label: string;
 }
 
-const tabs: TabItem[] = [
-    { icon: Grid2X2, label: "All" },
-    { icon: PlayCircle, label: "Films" },
-    { icon: Tv, label: "Web Series" },
-    { icon: Mic, label: "Podcasts" },
-    { icon: Trophy, label: "Live Matches" },
-    { icon: Music, label: "Music Videos" },
-    { icon: Car, label: "Automobile" },
-    { icon: Tv, label: "Documentaries" },
-    { icon: PlayCircle, label: "Short Films" },
-    { icon: Mic, label: "Talk Shows" },
-    { icon: Trophy, label: "Sports Highlights" },
-    { icon: Grid2X2, label: "Entertainment" },
-];
-
-export default function ScrollableTabs(): JSX.Element {
+export default function ScrollableTabs({ tabs }: { tabs: TabItem[] }) {
     const scrollRef = useRef<HTMLDivElement | null>(null);
     const [activeCategory, setActiveCategory] = useState("All");
     const [canScrollLeft, setCanScrollLeft] = useState(false);
