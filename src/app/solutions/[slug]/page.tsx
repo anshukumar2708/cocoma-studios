@@ -1,19 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { Star } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { CallToAction } from "@/components/ui/ctaSection";
 
 export default function ExplorePage() {
-    useEffect(() => {
-        AOS.init({
-            duration: 900,
-            once: true,
-            offset: 120,
-        });
-    }, []);
 
     const workflowSteps = [
         {
@@ -145,12 +134,12 @@ export default function ExplorePage() {
             {/* WORKFLOW SECTION */}
             <section className="section-container mt-8">
                 <div className="max-w-6xl mx-auto px-6 text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">Streamlined Workflow</h2>
+                    <h2 className="text-4xl font-bold text-primary mb-4">Streamlined Workflow</h2>
                     <p className="text-gray-400">
                         Experience automation at every stage — from ingestion to global delivery.
                     </p>
                 </div>
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 pb-20">
                     {workflowSteps.map((step, i) => (
                         <div
                             key={step.title}
@@ -230,7 +219,7 @@ export default function ExplorePage() {
             </section>
 
             {/* TESTIMONIALS */}
-            <section className="py-20 bg-neutral-950 border-t border-neutral-800">
+            <section className="w-full py-20">
                 <div className="max-w-6xl mx-auto px-6 text-center mb-12">
                     <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
                     <p className="text-gray-400">
@@ -268,23 +257,13 @@ export default function ExplorePage() {
                 </div>
             </section>
 
-            {/* CTA SECTION */}
-            <section className="py-24 text-center border-t border-neutral-800">
-                <h2 className="text-4xl font-bold mb-6" data-aos="fade-up">
-                    Ready to Power Your Streaming Workflow?
-                </h2>
-                <p
-                    className="text-gray-400 max-w-3xl mx-auto mb-8"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                >
-                    Launch and scale your OTT operations with AI-driven workflows that ensure
-                    speed, quality, and creativity — all in one place.
-                </p>
-                <button className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition">
-                    Contact Us
-                </button>
-            </section>
+            {/* CTA Section */}
+            <CallToAction
+                title="Ready to Power Your Streaming Workflow?"
+                description="Launch and scale your OTT operations with AI-driven workflows that ensure
+                    speed, quality, and creativity — all in one place."
+                primaryLink={{ href: "/contact-us", title: " Contact Us" }}
+            />
         </div>
     );
 }

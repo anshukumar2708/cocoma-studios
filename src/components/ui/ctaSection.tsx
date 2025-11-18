@@ -20,7 +20,7 @@ export const CallToAction: React.FC<CallToActionProps> = ({
     secondaryLink,
 }) => {
     return (
-        <section className="section-container py-16">
+        <section className="section-container pt-16 pb-0">
             <div className="glass-card text-center max-w-4xl mx-auto relative overflow-hidden rounded-2xl p-10">
                 {/* Gradient Glow Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-glow" />

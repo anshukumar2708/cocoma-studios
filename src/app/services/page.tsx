@@ -165,7 +165,7 @@ const Services = () => {
             <CallToAction
                 title="Ready to Get Started?"
                 description="Let&apos;s discuss how our services can bring your project to life"
-                primaryLink={{ href: "/contact", title: "Contact Us Today" }}
+                primaryLink={{ href: "/contact-u", title: "Contact Us Today" }}
             />
 
         </div>

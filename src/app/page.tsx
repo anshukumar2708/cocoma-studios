@@ -183,8 +183,8 @@ const Home = () => {
       <CallToAction
         title="Launch Your Next Big Idea"
         description="Partner with our creative team to craft campaigns that stand out."
-        primaryLink={{ href: "/get-started", title: "Get Started" }}
-        secondaryLink={{ href: "/portfolio", title: "Explore Work" }}
+        primaryLink={{ href: "/contact-us", title: "Get Started" }}
+        secondaryLink={{ href: "/work", title: "Explore Work" }}
       />
 
     </div>
