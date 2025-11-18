@@ -3,68 +3,120 @@ import { Card } from "@/components/ui/card";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
 import CustomLink from "@/components/ui/CustomLink";
+import { Metadata } from "next";
+import { CallToAction } from "@/components/ui/ctaSection";
+
+const positions = [
+    {
+        title: "Senior Video Editor",
+        department: "Post-Production",
+        location: "Remote / Los Angeles",
+        type: "Full-time",
+        description: "Join our editing team to work on major film and streaming projects.",
+    },
+    {
+        title: "Color Grading Artist",
+        department: "Post-Production",
+        location: "Remote / London",
+        type: "Full-time",
+        description: "Create stunning cinematic looks for feature films and series.",
+    },
+    {
+        title: "Sound Designer",
+        department: "Audio",
+        location: "Remote / Mumbai",
+        type: "Full-time",
+        description: "Design immersive audio experiences for diverse content.",
+    },
+    {
+        title: "Localization Project Manager",
+        department: "Localization",
+        location: "Remote",
+        type: "Full-time",
+        description: "Manage multi-language projects for global clients.",
+    },
+    {
+        title: "VFX Compositor",
+        department: "VFX",
+        location: "Remote / Vancouver",
+        type: "Full-time",
+        description: "Create seamless visual effects for film and television.",
+    },
+    {
+        title: "Motion Graphics Designer",
+        department: "Design",
+        location: "Remote / Singapore",
+        type: "Full-time",
+        description: "Design engaging motion graphics and title sequences.",
+    },
+];
+
+const benefits = [
+    { icon: Heart, title: "Work-Life Balance", description: "Flexible hours and remote work options" },
+    { icon: Zap, title: "Growth Opportunities", description: "Continuous learning and career development" },
+    { icon: Users, title: "Amazing Team", description: "Collaborate with industry veterans" },
+    { icon: Award, title: "Competitive Pay", description: "Industry-leading compensation and benefits" },
+];
+
+const values = [
+    "Creativity and Innovation",
+    "Collaboration and Teamwork",
+    "Continuous Learning",
+    "Quality Excellence",
+    "Diversity and Inclusion",
+    "Work-Life Harmony",
+];
+
+export const metadata: Metadata = {
+    title: "Careers | Cocoma Studios – Join Our Creative & Technology Team",
+    description:
+        "Build your career at Cocoma Studios. Explore open positions in creative production, AI engineering, post-production, content strategy, design, VFX, and OTT technology. Work with a team shaping the future of digital media and entertainment.",
+
+    keywords: [
+        "Cocoma Studios careers",
+        "media jobs",
+        "film production jobs",
+        "AI engineering jobs",
+        "OTT platform careers",
+        "video editing jobs",
+        "VFX jobs",
+        "creative jobs",
+        "content creation jobs",
+        "digital media careers",
+        "Cocoma hiring",
+        "work at Cocoma Studios",
+    ],
+
+    openGraph: {
+        title:
+            "Careers | Cocoma Studios – Work in Creative Media, AI, Post-Production & OTT Technology",
+        description:
+            "Join Cocoma Studios and build the future of media. We're hiring creators, editors, AI engineers, designers, and technical experts for high-impact roles in digital entertainment.",
+        url: "https://www.cocomastudios.com/careers",
+        siteName: "Cocoma Studios",
+        images: [
+            {
+                url: "/og/careers-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios Careers",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Careers at Cocoma Studios | Creative, Technical & Media Jobs",
+        description:
+            "Explore job opportunities at Cocoma Studios across creative, technical, and production teams — including editing, VFX, AI development, design, and OTT technology.",
+        images: ["/og/careers-banner.jpg"],
+    },
+};
 
 const Careers = () => {
-    const positions = [
-        {
-            title: "Senior Video Editor",
-            department: "Post-Production",
-            location: "Remote / Los Angeles",
-            type: "Full-time",
-            description: "Join our editing team to work on major film and streaming projects.",
-        },
-        {
-            title: "Color Grading Artist",
-            department: "Post-Production",
-            location: "Remote / London",
-            type: "Full-time",
-            description: "Create stunning cinematic looks for feature films and series.",
-        },
-        {
-            title: "Sound Designer",
-            department: "Audio",
-            location: "Remote / Mumbai",
-            type: "Full-time",
-            description: "Design immersive audio experiences for diverse content.",
-        },
-        {
-            title: "Localization Project Manager",
-            department: "Localization",
-            location: "Remote",
-            type: "Full-time",
-            description: "Manage multi-language projects for global clients.",
-        },
-        {
-            title: "VFX Compositor",
-            department: "VFX",
-            location: "Remote / Vancouver",
-            type: "Full-time",
-            description: "Create seamless visual effects for film and television.",
-        },
-        {
-            title: "Motion Graphics Designer",
-            department: "Design",
-            location: "Remote / Singapore",
-            type: "Full-time",
-            description: "Design engaging motion graphics and title sequences.",
-        },
-    ];
-
-    const benefits = [
-        { icon: Heart, title: "Work-Life Balance", description: "Flexible hours and remote work options" },
-        { icon: Zap, title: "Growth Opportunities", description: "Continuous learning and career development" },
-        { icon: Users, title: "Amazing Team", description: "Collaborate with industry veterans" },
-        { icon: Award, title: "Competitive Pay", description: "Industry-leading compensation and benefits" },
-    ];
-
-    const values = [
-        "Creativity and Innovation",
-        "Collaboration and Teamwork",
-        "Continuous Learning",
-        "Quality Excellence",
-        "Diversity and Inclusion",
-        "Work-Life Harmony",
-    ];
 
     return (
         <div className="min-h-screen">
@@ -177,15 +229,11 @@ const Careers = () => {
             </section>
 
             {/* CTA */}
-            <section className="section-container">
-                <div className="glass-card text-center max-w-4xl mx-auto flex flex-col justify-center items-center">
-                    <h2 className="text-3xl font-bold mb-4">Don&apos;t See a Perfect Match?</h2>
-                    <p className="text-xl text-muted-foreground mb-6">
-                        We&apos;re always looking for talented individuals. Send us your portfolio!
-                    </p>
-                    <CustomLink href="/hiring" title="Submit General Application" className="btn-primary" />
-                </div>
-            </section>
+            <CallToAction
+                title="Don&apos;t See a Perfect Match"
+                description="We&apos;re always looking for talented individuals. Send us your portfolio!"
+                primaryLink={{ href: "/hiring", title: "Submit General Application" }}
+            />
         </div>
     );
 };
