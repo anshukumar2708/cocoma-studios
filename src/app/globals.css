@@ -75,7 +75,7 @@
   }
 
   .glass-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 shadow-lg;
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg py-6 sm:px-6 px-2 shadow-lg;
   }
 
   .hover-lift {

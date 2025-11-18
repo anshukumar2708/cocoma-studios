@@ -1,166 +1,63 @@
-"use client";
-import { useState, ChangeEvent, FormEvent } from "react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import MapComponent from "@/components/MapComponent";
-import CustomLink from "@/components/ui/CustomLink";
+import ContactForm from "@/components/contact-us/contact-form";
+import { Metadata } from "next";
 
-// Define a type for form data
-interface ContactFormData {
-    name: string;
-    email: string;
-    phone: string;
-    company: string;
-    service: string;
-    message: string;
-}
+export const metadata: Metadata = {
+    title: "Contact Us | Cocoma Studios – Connect With Our Creative & OTT Solutions Team",
+    description:
+        "Get in touch with Cocoma Studios for AI localization, OTT workflow solutions, video production, content strategy, and post-production services. Our team is here to help you bring your creative vision to life.",
+    keywords: [
+        "Cocoma Studios contact",
+        "contact Cocoma",
+        "media production support",
+        "OTT workflow assistance",
+        "AI localization inquiry",
+        "video production contact",
+        "creative services support",
+        "post-production help",
+        "Cocoma customer support",
+        "Cocoma Studios team",
+    ],
+    openGraph: {
+        title:
+            "Contact Us | Cocoma Studios – Media Production, Localization & OTT Experts",
+        description:
+            "Reach out to our creative, technical, and production specialists for inquiries about OTT-ready workflows, AI localization, editing, VFX, and video production services.",
+        url: "https://www.cocomastudios.com/contact-us",
+        siteName: "Cocoma Studios",
+        images: [
+            {
+                url: "/og/contact-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Cocoma Studios – Contact Us",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Contact Cocoma Studios | Speak With Our OTT, Creative & AI Solutions Team",
+        description:
+            "We're here to help with AI-powered workflows, localization, creative production, editing, and OTT content delivery. Contact our team for collaboration and support.",
+        images: ["/og/contact-banner.jpg"],
+    },
+};
+
 
 const Contact: React.FC = () => {
-
-    // Typed state
-    const [formData, setFormData] = useState<ContactFormData>({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: "",
-    });
-
-    // Typed event handler
-    const handleChange = (
-        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ): void => {
-        const { id, value } = e.target;
-        setFormData((prev) => ({ ...prev, [id]: value }));
-    };
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            company: "",
-            service: "",
-            message: "",
-        });
-    };
-
-    const services: string[] = [
-        "Visual Promotion",
-        "Post-Production Services",
-        "Localisation Services",
-        "Music Video Production",
-        "General Inquiry",
-    ];
 
     return (
         <div className="min-h-screen mt-8">
             {/* Contact Form */}
             <section className="section-container">
                 <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                    {/* Form */}
-                    <Card className="glass-card">
-                        <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <Label htmlFor="name">Name *</Label>
-                                    <Input
-                                        id="name"
-                                        placeholder="Your name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="email">Email *</Label>
-                                    <Input
-                                        id="email"
-                                        type="email"
-                                        placeholder="your@email.com"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <Label htmlFor="phone">Phone</Label>
-                                    <Input
-                                        id="phone"
-                                        type="tel"
-                                        placeholder="+1 (555) 123-4567"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="company">Company</Label>
-                                    <Input
-                                        id="company"
-                                        placeholder="Your company"
-                                        value={formData.company}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <Label htmlFor="service">Service Interested In *</Label>
-                                <Select
-                                    value={formData.service}
-                                    onValueChange={(value: string) =>
-                                        setFormData((prev) => ({ ...prev, service: value }))
-                                    }
-                                >
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Select a service" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {services.map((service) => (
-                                            <SelectItem key={service} value={service}>
-                                                {service}
-                                            </SelectItem>
-                                        ))}
-                                    </SelectContent>
-                                </Select>
-                            </div>
-
-                            <div className="space-y-2">
-                                <Label htmlFor="message">Message *</Label>
-                                <Textarea
-                                    id="message"
-                                    placeholder="Tell us about your project..."
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    rows={6}
-                                    required
-                                />
-                            </div>
-                            <div className="mt-5">
-                                <CustomLink href="" title="Send Message" className="btn-primary w-full" />
-                                {/* <Send className="mr-2 w-5 h-5" />
-                                Send Message
-                            </Button> */}
-                            </div>
-                        </form>
-                    </Card>
-
+                    {/* contact form */}
+                    <ContactForm />
                     {/* Info */}
                     <div className="space-y-8">
                         <div className="animate-fade-in">
@@ -222,11 +119,9 @@ const Contact: React.FC = () => {
 
             {/* Map Section (Placeholder) */}
             <section className="section-container">
-                {/* <Card className="glass-card overflow-hidden"> */}
                 <div className="aspect-video">
-                    <MapComponent lat={21.1721808} lng={81.2957429} zoom={12} />
+                    <MapComponent lat={19.1299012} lng={72.84676} zoom={15} />
                 </div>
-                {/* </Card> */}
             </section>
 
             {/* Contact Info Cards */}
