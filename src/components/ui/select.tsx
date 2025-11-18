@@ -49,7 +49,7 @@ const SelectTrigger: React.FC<SelectTriggerProps> = ({
       type="button"
       {...props}
       onClick={() => setOpen((prev) => !prev)}
-      className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm 
+      className={`flex h-12 w-full items-center justify-between rounded-md border border-input bg-background px-3 text-sm 
         focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
     >
       <span className="truncate text-left">{value || placeholder || "Select an option"}</span>

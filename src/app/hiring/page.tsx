@@ -52,19 +52,9 @@ const Hiring = () => {
 
   return (
     <div className="min-h-screen">
-
-      {/* Hero Section */}
-      {/* <HeroSection
-        heroBg={heroBg}
-        title="Apply to"
-        highlightedText="Cocoma Studios"
-        subtitle="Comprehensive post-production and localisation solutions powered by AI technology and human expertise"
-      /> */}
-
-
       {/* Application Form */}
       <section className="section-container">
-        <h2 className="text-2xl font-semibold mb-6 text-white text-center my-5">Application Form</h2>
+        <h2 className="text-3xl font-bold mb-6 text-primary text-center my-5">Application Form</h2>
         <div className="max-w-5xl mx-auto">
           <Card className="glass-card">
             <form onSubmit={handleSubmit} className="space-y-10">
@@ -211,8 +201,8 @@ const Hiring = () => {
 
           {/* Info Box */}
           <div className="mt-8 glass-card">
-            <h3 className="font-semibold mb-4">What Happens Next?</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <h3 className="font-semibold text-lg mb-4">What Happens Next?</h3>
+            <ul className="space-y-3 text-md text-muted-foreground">
               <li className="flex gap-2">
                 <span className="text-primary">•</span>
                 <span>Our team will review your application within 5-7 business days</span>
