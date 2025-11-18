@@ -18,7 +18,6 @@ export default function Header() {
     { name: 'Our Work', path: '/work' },
     { name: 'Solutions', path: '/solutions' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact-us' },
   ];
 
@@ -40,7 +39,7 @@ export default function Header() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`relative text-md font-medium transition-colors hover:text-primary ${isActive(link.path) ? 'text-primary' : 'text-foreground/80'
+                className={`relative text-lg font-medium transition-colors hover:text-primary ${isActive(link.path) ? 'text-primary' : 'text-foreground/80'
                   }`}
               >
                 {link.name}
