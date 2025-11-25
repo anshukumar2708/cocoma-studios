@@ -96,6 +96,19 @@
 
 }
 
+.card-title {
+  @apply text-3xl font-semibold group-hover:text-primary transition-colors;
+}
+
+.card-description {
+  @apply text-base text-muted-foreground;
+}
+
+.card-point-text {
+  @apply text-sm text-muted-foreground;
+}
+
+
 /* Hide scrollbar for Chrome, Safari, and Opera */
 .scrollbar-none::-webkit-scrollbar {
   display: none;

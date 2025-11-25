@@ -12,26 +12,30 @@ const services = [
   {
     icon: Film,
     title: "Visual Promotion",
-    description: "Create stunning key art, trailers, and social media content that captures attention.",
+    description: "Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
     items: ["Key Art Development", "Trailer & Teaser Editing", "Social Media Creatives"],
+    image: "/free/camera1.jpg",
   },
   {
     icon: Sparkles,
     title: "Post-Production",
-    description: "Complete editing, sound design, color grading, and VFX for films and web series.",
+    description: "Complete editing, sound design, color grading, and VFX for films and web series Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
     items: ["Film & Web Series Editing", "Sound Design & Mixing", "Color Grading / DI"],
+    image: "/free/camera2.jpg",
   },
   {
     icon: Globe,
     title: "Localisation Services",
-    description: "Professional transcription, translation, subtitling, and dubbing in multiple languages.",
+    description: "Professional transcription, translation, subtitling, and dubbing in multiple languages Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
     items: ["Transcription & Translation", "Subtitling & Dubbing", "Multi-language Administration"],
+    image: "/free/camera1.jpg",
   },
   {
     icon: Music,
     title: "Music Video Production",
-    description: "End-to-end music video production, from concept to final delivery.",
+    description: "End-to-end music video production, from concept to final delivery Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention.",
     items: ["Music Video Editing", "Key Art Development", "Promo & Teaser Editing"],
+    image: "/free/camera2.jpg",
   },
 ];
 
@@ -110,10 +114,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="w-full flex flex-col justify-center items-center gap-6">
           {services.map((service, index) => (
-            <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <ServiceCard {...service} />
+            <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <ServiceCard {...service} index={index} />
             </div>
           ))}
         </div>
