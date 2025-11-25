@@ -1,5 +1,6 @@
 import React from "react";
 import CustomLink from "./CustomLink";
+import Image from "next/image";
 
 interface LinkProps {
     href: string;
@@ -20,31 +21,53 @@ export const CallToAction: React.FC<CallToActionProps> = ({
     secondaryLink,
 }) => {
     return (
-        <section className="section-container pt-16 pb-0">
-            <div className="glass-card text-center max-w-4xl mx-auto relative overflow-hidden rounded-2xl p-10">
-                {/* Gradient Glow Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-glow" />
+        <section className="section-container pb-0 mt-10">
+            <div className="glass-card text-center w-full mx-auto relative overflow-hidden rounded-2xl p-0">
 
                 {/* Content */}
-                <div className="relative z-10">
-                    <h2 className="text-4xl font-bold mb-4">{title}</h2>
-                    <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                        {description}
-                    </p>
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center">
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        {secondaryLink && <CustomLink
-                            href={secondaryLink?.href}
-                            title={secondaryLink?.title}
-                            className="btn-secondary"
-                        />}
-                        {primaryLink && <CustomLink
-                            href={primaryLink?.href}
-                            title={primaryLink?.title}
-                            className="btn-primary"
-                        />}
+                    {/* LEFT: Image */}
+
+                    <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                        <Image
+                            src="/free/camera2.jpg"
+                            alt="image"
+                            width={1200}
+                            height={600}
+                            className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                        />
                     </div>
+
+
+                    {/* RIGHT: Content */}
+                    <div className="w-full flex flex-col justify-start items-start p-8">
+                        <h2 className="text-4xl font-bold mb-4">{title}</h2>
+
+                        <p className="text-xl text-muted-foreground mb-8 max-w-xl">
+                            {description}
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            {secondaryLink && (
+                                <CustomLink
+                                    href={secondaryLink?.href}
+                                    title={secondaryLink?.title}
+                                    className="btn-secondary"
+                                />
+                            )}
+                            {primaryLink && (
+                                <CustomLink
+                                    href={primaryLink?.href}
+                                    title={primaryLink?.title}
+                                    className="btn-primary"
+                                />
+                            )}
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </section>
     );

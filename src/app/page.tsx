@@ -166,7 +166,6 @@ const Home = () => {
         primaryLink={{ href: "/contact-us", title: "Get Started" }}
         secondaryLink={{ href: "/work", title: "Explore Work" }}
       />
-
     </div>
   );
 };
