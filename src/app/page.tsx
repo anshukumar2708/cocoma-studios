@@ -1,4 +1,4 @@
-import { Film, Globe, Music, Sparkles, CheckCircle2, TrendingUp, Shield } from "lucide-react";
+import { Film, Globe, Music, Sparkles, TrendingUp, Shield } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import HeroSection from "@/components/ui/HeroSection";
 import CustomLink from "@/components/ui/CustomLink";
 import { Metadata } from "next";
 import { CallToAction } from "@/components/ui/ctaSection";
+import WhyChooseCocoma from "@/components/common/why-choose-cocoma";
 
 
 const services = [
@@ -129,33 +130,7 @@ const Home = () => {
 
       {/* Why Choose Us */}
       <section className="section-container">
-        <div className="glass-card max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Cocoma Studios?</h2>
-            <p className="text-xl text-muted-foreground">
-              Excellence powered by cutting-edge AI technology
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              { title: "AI-Powered Workflow", desc: "Leverage advanced AI for faster, smarter production" },
-              { title: "International Expertise", desc: "Multi-language support with native speakers" },
-              { title: "Industry Veterans", desc: "Team of award-winning professionals" },
-              { title: "24/7 Support", desc: "Round-the-clock assistance for global clients" },
-              { title: "Quick Turnaround", desc: "Meet tight deadlines without compromising quality" },
-              { title: "Scalable Solutions", desc: "From indie projects to large-scale productions" },
-            ].map((item, index) => (
-              <div key={item.title} className="flex gap-4 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <WhyChooseCocoma />
       </section>
 
       {/* Solutions */}
