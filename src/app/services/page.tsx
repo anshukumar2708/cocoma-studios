@@ -6,33 +6,140 @@ import { Metadata } from "next";
 import { CallToAction } from "@/components/ui/ctaSection";
 
 const visualPromotion = [
-    { icon: Image, title: "Key Art Development", description: "Stunning visual designs for posters, thumbnails, and promotional materials", items: ["Poster Design", "Thumbnail Creation", "Digital Banners", "Social Assets"] },
-    { icon: Film, title: "Trailer & Teaser Editing", description: "Captivating trailers that drive engagement and build anticipation", items: ["Film Trailers", "Web Series Teasers", "Launch Promos", "Highlight Reels"] },
-    { icon: Sparkles, title: "Promo & Sizzle Editing", description: "Dynamic promotional content optimized for all platforms", items: ["Brand Promos", "Sizzle Reels", "Event Coverage", "Campaign Videos"] },
-    { icon: Wand2, title: "Social Media Creatives", description: "Engaging content tailored for social media platforms", items: ["Instagram Reels", "YouTube Shorts", "TikTok Content", "Story Formats"] },
+    {
+        icon: Image,
+        title: "Key Art Development",
+        description: "Stunning visual designs for posters, thumbnails, and promotional materials",
+        items: ["Poster Design", "Thumbnail Creation", "Digital Banners", "Social Assets"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Film,
+        title: "Trailer & Teaser Editing",
+        description: "Captivating trailers that drive engagement and build anticipation",
+        items: ["Film Trailers", "Web Series Teasers", "Launch Promos", "Highlight Reels"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Sparkles,
+        title: "Promo & Sizzle Editing",
+        description: "Dynamic promotional content optimized for all platforms",
+        items: ["Brand Promos", "Sizzle Reels", "Event Coverage", "Campaign Videos"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Wand2,
+        title: "Social Media Creatives",
+        description: "Engaging content tailored for social media platforms",
+        items: ["Instagram Reels", "YouTube Shorts", "TikTok Content", "Story Formats"],
+        image: "/free/camera1.jpg",
+    },
 ];
 
 const postProduction = [
-    { icon: Scissors, title: "Film & Web Series Editing", description: "Professional editing services for all formats and genres", items: ["Feature Films", "Web Series", "Documentaries", "Short Films"] },
-    { icon: Mic2, title: "Sound Design & Mixing", description: "Immersive audio experiences with professional sound engineering", items: ["Sound Design", "Audio Mixing", "Mastering", "Foley Work"] },
-    { icon: Palette, title: "Color Grading / DI Services", description: "Cinematic color grading and digital intermediate services", items: ["Color Correction", "Creative Grading", "DI Workflow", "HDR Mastering"] },
-    { icon: Wand2, title: "Motion Graphics & VFX", description: "Stunning visual effects and motion graphics", items: ["VFX Compositing", "Motion Graphics", "3D Animation", "Title Design"] },
+    {
+        icon: Scissors,
+        title: "Film & Web Series Editing",
+        description: "Professional editing services for all formats and genres",
+        items: ["Feature Films", "Web Series", "Documentaries", "Short Films"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Mic2,
+        title: "Sound Design & Mixing",
+        description: "Immersive audio experiences with professional sound engineering",
+        items: ["Sound Design", "Audio Mixing", "Mastering", "Foley Work"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Palette,
+        title: "Color Grading / DI Services",
+        description: "Cinematic color grading and digital intermediate services",
+        items: ["Color Correction", "Creative Grading", "DI Workflow", "HDR Mastering"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Wand2,
+        title: "Motion Graphics & VFX",
+        description: "Stunning visual effects and motion graphics",
+        items: ["VFX Compositing", "Motion Graphics", "3D Animation", "Title Design"],
+        image: "/free/camera1.jpg",
+    },
 ];
 
 const localisation = [
-    { icon: FileText, title: "Transcription", description: "Accurate transcription services in multiple languages", items: ["Audio Transcription", "Video Transcription", "Time-coded Scripts", "Format Conversion"] },
-    { icon: Languages, title: "Translation", description: "Professional translation by native speakers", items: ["Script Translation", "Document Translation", "Cultural Adaptation", "Quality Assurance"] },
-    { icon: Globe, title: "Subtitling", description: "Precise subtitling and closed captioning services", items: ["Open Subtitles", "Closed Captions", "SDH Subtitles", "Multi-language Subs"] },
-    { icon: Mic2, title: "Dubbing", description: "Professional dubbing with native voice actors", items: ["Voice Casting", "Lip Sync Dubbing", "Voice Direction", "Audio Mastering"] },
-    { icon: Headphones, title: "Audio Mix & Sound Design", description: "Complete audio post-production for localized content", items: ["Dialogue Mixing", "Music Integration", "Sound Effects", "Final Mix"] },
-    { icon: Globe, title: "Multi-language Administration", description: "End-to-end management of multi-language projects", items: ["Project Management", "Quality Control", "Asset Management", "Delivery Coordination"] },
+    {
+        icon: FileText,
+        title: "Transcription",
+        description: "Accurate transcription services in multiple languages",
+        items: ["Audio Transcription", "Video Transcription", "Time-coded Scripts", "Format Conversion"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Languages,
+        title: "Translation",
+        description: "Professional translation by native speakers",
+        items: ["Script Translation", "Document Translation", "Cultural Adaptation", "Quality Assurance"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Globe,
+        title: "Subtitling",
+        description: "Precise subtitling and closed captioning services",
+        items: ["Open Subtitles", "Closed Captions", "SDH Subtitles", "Multi-language Subs"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Mic2, title: "Dubbing",
+        description: "Professional dubbing with native voice actors",
+        items: ["Voice Casting", "Lip Sync Dubbing", "Voice Direction", "Audio Mastering"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Headphones,
+        title: "Audio Mix & Sound Design",
+        description: "Complete audio post-production for localized content",
+        items: ["Dialogue Mixing", "Music Integration", "Sound Effects", "Final Mix"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Globe,
+        title: "Multi-language Administration",
+        description: "End-to-end management of multi-language projects",
+        items: ["Project Management", "Quality Control", "Asset Management", "Delivery Coordination"],
+        image: "/free/camera1.jpg",
+    },
 ];
 
 const musicVideo = [
-    { icon: Scissors, title: "Music Video Editing", description: "Creative editing for music videos across all genres", items: ["Narrative Editing", "Performance Cuts", "Effects Integration", "Multi-cam Editing"] },
-    { icon: Image, title: "Key Art for Songs", description: "Eye-catching visual designs for music releases", items: ["Album Covers", "Single Artwork", "Lyric Videos", "Visualizers"] },
-    { icon: Film, title: "Promo & Teaser Editing", description: "Promotional content to maximize music release impact", items: ["Release Teasers", "Behind-the-Scenes", "Social Promos", "Artist Features"] },
-    { icon: Sparkles, title: "Music Video Social Media", description: "Optimized content for social media platforms", items: ["Instagram Content", "YouTube Shorts", "TikTok Clips", "Reels & Stories"] },
+    {
+        icon: Scissors,
+        title: "Music Video Editing",
+        description: "Creative editing for music videos across all genres",
+        items: ["Narrative Editing", "Performance Cuts", "Effects Integration", "Multi-cam Editing"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Image,
+        title: "Key Art for Songs",
+        description: "Eye-catching visual designs for music releases",
+        items: ["Album Covers", "Single Artwork", "Lyric Videos", "Visualizers"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Film,
+        title: "Promo & Teaser Editing",
+        description: "Promotional content to maximize music release impact",
+        items: ["Release Teasers", "Behind-the-Scenes", "Social Promos", "Artist Features"],
+        image: "/free/camera1.jpg",
+    },
+    {
+        icon: Sparkles,
+        title: "Music Video Social Media",
+        description: "Optimized content for social media platforms",
+        items: ["Instagram Content", "YouTube Shorts", "TikTok Clips", "Reels & Stories"],
+        image: "/free/camera1.jpg",
+    },
 ];
 
 
@@ -100,10 +207,10 @@ const Services = () => {
                         Create compelling visual content that captures attention and drives engagement
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="w-full flex flex-col justify-center items-center gap-6">
                     {visualPromotion.map((service, index) => (
-                        <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                            <ServiceCard {...service} />
+                        <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                            <ServiceCard {...service} index={index} />
                         </div>
                     ))}
                 </div>
@@ -117,10 +224,10 @@ const Services = () => {
                         Professional editing, sound design, color grading, and VFX for films, web series, and more
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="w-full flex flex-col justify-center items-center gap-6">
                     {postProduction.map((service, index) => (
-                        <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                            <ServiceCard {...service} />
+                        <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                            <ServiceCard {...service} index={index} />
                         </div>
                     ))}
                 </div>
@@ -134,10 +241,10 @@ const Services = () => {
                         Bridge language barriers with professional transcription, translation, subtitling, and dubbing
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="w-full flex flex-col justify-center items-center gap-6">
                     {localisation.map((service, index) => (
-                        <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                            <ServiceCard {...service} />
+                        <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                            <ServiceCard {...service} index={index} />
                         </div>
                     ))}
                 </div>
@@ -151,10 +258,10 @@ const Services = () => {
                         End-to-end music video production services from editing to promotional content
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="w-full flex flex-col justify-center items-center gap-6">
                     {musicVideo.map((service, index) => (
-                        <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                            <ServiceCard {...service} />
+                        <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                            <ServiceCard {...service} index={index} />
                         </div>
                     ))}
                 </div>
