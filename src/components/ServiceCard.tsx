@@ -13,7 +13,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description, items, image, index }: ServiceCardProps) => {
   return (
-    <div className="w-full flex justify-center items-center px-4 py-6">
+    <div className="w-full flex justify-center items-center">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
         {/* LEFT / RIGHT based on index */}

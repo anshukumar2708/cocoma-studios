@@ -76,45 +76,50 @@ export default function WhyChooseCocoma(): JSX.Element {
                     return (
                         <article
                             key={index}
-                            className="relative rounded-2xl overflow-hidden group shadow-lg"
+                            className="relative rounded-lg md:rounded-2xl overflow-hidden group shadow-lg transition-transform duration-300 hover:-translate-y-2"
                             aria-labelledby={`feature-${index}`}
                         >
-                            {/* Background image using next/image for optimization */}
-                            <div className="absolute inset-0">
+                            {/* Background image */}
+                            <div className="absolute inset-0 overflow-hidden">
                                 <Image
                                     src={item?.image}
                                     alt={item?.title}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                    priority={false}
+                                    width={500}
+                                    height={400}
+                                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                                 />
-                                {/* overlay to darken + subtle filter */}
+
+                                {/* Light overlay — brighter on hover */}
                                 <div
                                     aria-hidden
-                                    className="absolute inset-0"
-                                    style={{ background: "rgba(6,8,15,0.5)", mixBlendMode: "multiply" }}
+                                    className="absolute inset-0 transition-all duration-500 group-hover:bg-white/20"
+                                    style={{ background: "rgba(255,255,255,0.12)" }}
                                 />
                             </div>
 
                             {/* Glassy content */}
                             <div className="w-full relative z-10 p-4 md:p-6 bg-black/30 backdrop-blur-sm border border-white/6 rounded-2xl h-full flex flex-col justify-start items-center gap-4">
+
+                                {/* Icon + Title */}
                                 <div className="w-full flex-shrink-0 flex justify-start items-center gap-4 mb-2">
-                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow transition-transform duration-300 group-hover:scale-105">
+                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow transition-transform duration-300 group-hover:scale-110">
                                         <Icon className="w-6 h-6 text-white" />
                                     </div>
+
                                     <h3
-                                        className="text-white md:text-xl lg:text-2xl font-semibold leading-tight"
+                                        className="text-white md:text-xl lg:text-2xl font-semibold leading-tight transition-colors duration-300 group-hover:text-primary"
                                     >
                                         {item?.title}
                                     </h3>
                                 </div>
 
+                                {/* Subtitle */}
                                 <p className="w-full text-base text-white/75">
                                     {item?.subtitle}
                                 </p>
                             </div>
                         </article>
+
                     );
                 })}
             </div>

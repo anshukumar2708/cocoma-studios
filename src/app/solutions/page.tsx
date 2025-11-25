@@ -4,6 +4,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import CustomLink from "@/components/ui/CustomLink";
 import { CallToAction } from "@/components/ui/ctaSection";
 import { Metadata } from "next";
+import WhyChooseCocoma from "@/components/common/why-choose-cocoma";
 
 const solutions = [
     {
@@ -72,32 +73,32 @@ const solutions = [
     },
 ];
 
-const featuresData = [
-    {
-        title: "Industry Expertise",
-        desc: "Deep understanding of sector-specific requirements and workflows",
-    },
-    {
-        title: "Scalable Technology",
-        desc: "AI-powered solutions that grow with your business",
-    },
-    {
-        title: "Flexible Integration",
-        desc: "Seamlessly integrate with your existing systems and processes",
-    },
-    {
-        title: "Dedicated Support",
-        desc: "Account managers and technical support tailored to your needs",
-    },
-    {
-        title: "Cost-Effective",
-        desc: "Optimize your production costs without compromising quality",
-    },
-    {
-        title: "Global Reach",
-        desc: "Serve audiences worldwide with our localization capabilities",
-    },
-];
+// const featuresData = [
+//     {
+//         title: "Industry Expertise",
+//         desc: "Deep understanding of sector-specific requirements and workflows",
+//     },
+//     {
+//         title: "Scalable Technology",
+//         desc: "AI-powered solutions that grow with your business",
+//     },
+//     {
+//         title: "Flexible Integration",
+//         desc: "Seamlessly integrate with your existing systems and processes",
+//     },
+//     {
+//         title: "Dedicated Support",
+//         desc: "Account managers and technical support tailored to your needs",
+//     },
+//     {
+//         title: "Cost-Effective",
+//         desc: "Optimize your production costs without compromising quality",
+//     },
+//     {
+//         title: "Global Reach",
+//         desc: "Serve audiences worldwide with our localization capabilities",
+//     },
+// ];
 
 export const metadata: Metadata = {
     title: "Solutions | Cocoma Studios – AI-Powered Media, Localization & OTT Solutions",
@@ -190,17 +191,14 @@ const Solutions = () => {
             ))}
 
             {/* Why Choose Our Solutions */}
-            <section className="section-container">
+            {/* <section className="section-container">
                 <div className="glass-card max-w-5xl mx-auto">
-                    {/* Heading */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold mb-4">Why Choose Our Solutions?</h2>
                         <p className="text-xl text-muted-foreground">
                             We understand the unique challenges of each industry
                         </p>
                     </div>
-
-                    {/* Features Grid */}
                     <div className="grid md:grid-cols-2 gap-8">
                         {featuresData.map((item, index) => (
                             <div
@@ -217,6 +215,9 @@ const Solutions = () => {
                         ))}
                     </div>
                 </div>
+            </section> */}
+            <section className="section-container">
+                <WhyChooseCocoma />
             </section>
 
             {/* CTA */}
