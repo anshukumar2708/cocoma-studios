@@ -62,11 +62,11 @@ export default function WhyChooseCocoma(): JSX.Element {
     return (
         <section className="w-full mx-auto">
             <div className="text-center mb-16">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+                <h2 className="page-title">
                     Why Choose Cocoma Studios?
                 </h2>
-                <p className="mt-2 text-lg text-muted-foreground">
-                    Excellence powered by cutting-edge AI technology
+                <p className="mt-2 page-description">
+                    Excellence powered by cutting-edge AI technology Excellence powered by cutting-edge AI technology
                 </p>
             </div>
 

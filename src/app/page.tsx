@@ -1,42 +1,49 @@
 import { Film, Globe, Music, Sparkles, TrendingUp, Shield } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
 import HeroSection from "@/components/ui/HeroSection";
 import CustomLink from "@/components/ui/CustomLink";
 import { Metadata } from "next";
 import { CallToAction } from "@/components/ui/ctaSection";
 import WhyChooseCocoma from "@/components/common/why-choose-cocoma";
+import Service from "@/components/services/service";
 
 
-const services = [
+const serviceData = [
   {
-    icon: Film,
-    title: "Visual Promotion",
-    description: "Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
-    items: ["Key Art Development", "Trailer & Teaser Editing", "Social Media Creatives"],
-    image: "/free/camera1.jpg",
-  },
-  {
-    icon: Sparkles,
-    title: "Post-Production",
-    description: "Complete editing, sound design, color grading, and VFX for films and web series Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
-    items: ["Film & Web Series Editing", "Sound Design & Mixing", "Color Grading / DI"],
-    image: "/free/camera2.jpg",
-  },
-  {
-    icon: Globe,
-    title: "Localisation Services",
-    description: "Professional transcription, translation, subtitling, and dubbing in multiple languages Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
-    items: ["Transcription & Translation", "Subtitling & Dubbing", "Multi-language Administration"],
-    image: "/free/camera1.jpg",
-  },
-  {
-    icon: Music,
-    title: "Music Video Production",
-    description: "End-to-end music video production, from concept to final delivery Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention.",
-    items: ["Music Video Editing", "Key Art Development", "Promo & Teaser Editing"],
-    image: "/free/camera2.jpg",
+    id: "Our Services",
+    title: "Our Services",
+    subtitle: "Comprehensive solutions for all your production needs Comprehensive solutions for all your production needs",
+    services: [
+      {
+        icon: Film,
+        title: "Visual Promotion",
+        description: "Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
+        items: ["Key Art Development", "Trailer & Teaser Editing", "Social Media Creatives"],
+        image: "/free/camera1.jpg",
+      },
+      {
+        icon: Sparkles,
+        title: "Post-Production",
+        description: "Complete editing, sound design, color grading, and VFX for films and web series Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
+        items: ["Film & Web Series Editing", "Sound Design & Mixing", "Color Grading / DI"],
+        image: "/free/camera2.jpg",
+      },
+      {
+        icon: Globe,
+        title: "Localisation Services",
+        description: "Professional transcription, translation, subtitling, and dubbing in multiple languages Create stunning key art, trailers, and social media content that captures attention. Create stunning key art, trailers, and social media content that captures attention",
+        items: ["Transcription & Translation", "Subtitling & Dubbing", "Multi-language Administration"],
+        image: "/free/camera1.jpg",
+      },
+      {
+        icon: Music,
+        title: "Music Video Production",
+        description: "End-to-end music video production, from concept to final delivery Create stunning key art, trailers, and social media content that captures attention Create stunning key art, trailers, and social media content that captures attention.",
+        items: ["Music Video Editing", "Key Art Development", "Promo & Teaser Editing"],
+        image: "/free/camera2.jpg",
+      },
+    ]
   },
 ];
 
@@ -107,22 +114,8 @@ const Home = () => {
       />
 
       {/* Services Overview */}
-      <section className="section-container">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive solutions for all your production needs
-          </p>
-        </div>
-
-        <div className="w-full flex flex-col justify-center items-center gap-6">
-          {services.map((service, index) => (
-            <div key={service.title} className="w-full animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <ServiceCard {...service} index={index} />
-            </div>
-          ))}
-        </div>
-
+      <section className="w-full">
+        <Service serviceData={serviceData} />
         <div className="w-full flex justify-center items-center mt-12">
           <CustomLink href="/services" title="View All Services" className="btn-primary" />
         </div>
@@ -136,9 +129,9 @@ const Home = () => {
       {/* Solutions */}
       <section className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Tailored Solutions</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Custom services designed for your industry
+          <h2 className="page-title">Tailored Solutions</h2>
+          <p className="page-description mx-auto">
+            Custom services designed for your industry Custom services designed for your industry
           </p>
         </div>
 

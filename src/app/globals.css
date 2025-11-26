@@ -96,6 +96,16 @@
 
 }
 
+/* css for pages  title & description*/
+.page-title {
+  @apply text-5xl font-bold mb-4 text-center text-primary;
+}
+
+.page-description {
+  @apply text-xl text-muted-foreground text-center max-w-4xl mx-auto;
+}
+
+/* css for cards */
 .card-title {
   @apply text-3xl font-semibold group-hover:text-primary transition-colors;
 }
@@ -107,6 +117,9 @@
 .card-point-text {
   @apply text-sm text-muted-foreground;
 }
+
+
+
 
 
 /* Hide scrollbar for Chrome, Safari, and Opera */

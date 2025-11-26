@@ -1,12 +1,11 @@
 import { LucideIcon } from "lucide-react";
-// import { Card } from "./ui/card";
 import Image from "next/image";
 
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  items?: string[];
+  items: string[];
   image: string;
   index: number;
 }

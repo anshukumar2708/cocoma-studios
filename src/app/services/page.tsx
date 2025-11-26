@@ -1,10 +1,9 @@
-// app/services/page.tsx  (or wherever your Services page lives)
 import { Film, Sparkles, Globe, Image, Scissors, Mic2, Palette, Wand2, Languages, FileText, Headphones } from "lucide-react";
-import ServiceCard from "@/components/ServiceCard";
 import HeroSection from "@/components/ui/HeroSection";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Metadata } from "next";
 import { CallToAction } from "@/components/ui/ctaSection";
+import Service from "@/components/services/service";
 
 export const metadata: Metadata = {
     title: "Our Services | Cocoma Studios – Digital Strategy, Video Production & OTT Marketing",
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     },
 };
 
-const sections = [
+const serviceData = [
     {
         id: "visual-promotion",
         title: "Visual Promotion",
@@ -210,26 +209,11 @@ const Services = () => {
                 subtitle="Comprehensive post-production and localisation solutions powered by AI technology and human expertise"
             />
 
-            {sections?.map((section) => (
-                <section key={section?.id} className="section-container">
-                    <div className="mb-12 animate-fade-in">
-                        <h2 className="text-4xl font-bold mb-4 text-center">{section?.title}</h2>
-                        <p className="text-xl text-muted-foreground text-center max-w-3xl mx-auto">{section?.subtitle}</p>
-                    </div>
+            {/* Services section */}
+            <section className="w-full">
+                <Service serviceData={serviceData} />
+            </section>
 
-                    <div className="w-full flex flex-col justify-center items-center gap-6">
-                        {section?.services?.map((svc, idx) => (
-                            <div
-                                key={`${svc.title}-${idx}`}
-                                className="w-full animate-fade-in"
-                                style={{ animationDelay: `${idx * 50}ms` }}
-                            >
-                                <ServiceCard {...svc} index={idx} />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            ))}
 
             <CallToAction
                 title="Ready to Get Started?"

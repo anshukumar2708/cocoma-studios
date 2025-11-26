@@ -2,6 +2,8 @@ import { Users, Target, Award, Zap, Heart, Globe2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import HeroSection from "@/components/ui/HeroSection";
 import { Metadata } from "next";
+import teamImage from "@/assets/satyam.jpeg";
+import OurTeamCard from "@/components/our-team/our-team";
 
 const values = [
     { icon: Target, title: "Excellence", description: "Delivering world-class quality in every project" },
@@ -59,6 +61,19 @@ export const metadata: Metadata = {
     },
 };
 
+const ourTeamData = [
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+];
+
 
 const About = () => {
 
@@ -79,7 +94,7 @@ const About = () => {
             <section className="section-container">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="animate-fade-in-left">
-                        <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                        <h2 className="text-3xl font-bold text-primary mb-6">Our Story</h2>
                         <div className="space-y-4 text-muted-foreground">
                             <p>
                                 Founded with a vision to revolutionize the post-production industry, Cocoma Studios has grown from a small creative team into a global powerhouse serving clients across 50+ countries.
@@ -127,8 +142,8 @@ const About = () => {
             {/* Values */}
             <section className="section-container">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="page-title">Our Core Values</h2>
+                    <p className="page-description mt-2 mx-auto">
                         The principles that guide everything we do
                     </p>
                 </div>
@@ -165,13 +180,25 @@ const About = () => {
             {/* Team Section */}
             <section className="section-container">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4">Meet Our Team</h2>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <h2 className="page-title">Meet Our Team</h2>
+                    <p className="page-description mt-2 mx-auto">
                         A diverse team of creative professionals and technical experts from around the world
                     </p>
                 </div>
 
-                <div className="glass-card max-w-4xl mx-auto text-center">
+                <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                    {ourTeamData?.map((team, index) => (
+                        <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                            <OurTeamCard
+                                name={team?.name}
+                                imageUrl={team?.imageUrl}
+                                designation={team?.designation}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                <div className="glass-card max-full mx-auto text-center mt-16">
                     <Users className="w-16 h-16 text-primary mx-auto mb-6" />
                     <h3 className="text-2xl font-semibold mb-4">100+ Creative Minds</h3>
                     <p className="text-muted-foreground mb-6">

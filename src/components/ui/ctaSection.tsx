@@ -23,8 +23,8 @@ export const CallToAction: React.FC<CallToActionProps> = ({
     return (
         <section className="section-container pb-0 mt-10">
             <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold mb-4">Create Campaigns That Stand Out</h2>
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                <h2 className="page-title">Create Campaigns That Stand Out</h2>
+                <p className="page-description mt-2">
                     From concepts to final edits, we help you build compelling visual stories that capture attention and deliver real results for your brand.
                 </p>
             </div>
