@@ -2,7 +2,9 @@ import { Users, Target, Award, Zap, Heart, Globe2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import HeroSection from "@/components/ui/HeroSection";
 import { Metadata } from "next";
-import teamImage from "@/assets/satyam.jpeg";
+import satyam from "@/assets/satyam.jpeg";
+import vyom from "@/assets/vyom.jpg";
+// import rajesh from "@/assets/rajesh.jpeg";
 import OurTeamCard from "@/components/our-team/our-team";
 
 const values = [
@@ -62,16 +64,16 @@ export const metadata: Metadata = {
 };
 
 const ourTeamData = [
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
-    { name: "Satyam Kumar", imageUrl: teamImage, designation: "Backend Developer" },
+    { name: "Satyam Kumar", imageUrl: satyam, designation: "Backend Developer", experience: "3 Years" },
+    { name: "Satyam Kumar", imageUrl: satyam, designation: "Backend Developer", experience: "4 Years" },
+    { name: "Satyam Kumar", imageUrl: satyam, designation: "Backend Developer", experience: "2 Years" },
+    { name: "Satyam Kumar", imageUrl: satyam, designation: "Backend Developer", experience: "5 Years" },
+    { name: "Satyam Kumar", imageUrl: satyam, designation: "Backend Developer", experience: "3 Years" },
+    { name: "Satyam Kumar", imageUrl: vyom, designation: "Backend Developer", experience: "6 Years" },
+    { name: "Satyam Kumar", imageUrl: vyom, designation: "Backend Developer", experience: "7 Years" },
+    { name: "Satyam Kumar", imageUrl: vyom, designation: "Backend Developer", experience: "4 Years" },
+    { name: "Satyam Kumar", imageUrl: vyom, designation: "Backend Developer", experience: "5 Years" },
+    { name: "Satyam Kumar", imageUrl: vyom, designation: "Backend Developer", experience: "8 Years" },
 ];
 
 
@@ -193,6 +195,7 @@ const About = () => {
                                 name={team?.name}
                                 imageUrl={team?.imageUrl}
                                 designation={team?.designation}
+                                experience={team?.experience}
                             />
                         </div>
                     ))}
