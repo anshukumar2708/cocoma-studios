@@ -5,7 +5,7 @@ export interface IServiceItem {
     title: string;
     description: string;
     items: string[];
-    image: string;
+    images: string[];
 }
 
 export interface ISection {

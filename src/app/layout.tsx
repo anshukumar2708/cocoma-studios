@@ -4,6 +4,8 @@ import 'aos/dist/aos.css';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AOSInit from "@/components/AOSInit";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const geistSans = localFont({

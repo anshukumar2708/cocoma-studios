@@ -1,34 +1,27 @@
 import { LucideIcon } from "lucide-react";
-import Image from "next/image";
+import ImageSlider from "./common/image-slider";
 
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
   items: string[];
-  image: string;
+  images: string[];
   index: number;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, items, image, index }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, items, images, index }: ServiceCardProps) => {
+
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
         {/* LEFT / RIGHT based on index */}
         <div
-          className={`flex justify-center md:justify-end w-full ${index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
+          className={`w-full flex justify-center md:justify-end ${index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
             }`}
         >
-          <div className="w-full h-auto rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={image}
-              alt="image"
-              width={1200}
-              height={600}
-              className="w-full h-auto max-h-80 object-cover transform hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <ImageSlider images={images} />
         </div>
 
         {/* Content Block */}
@@ -36,9 +29,6 @@ const ServiceCard = ({ icon: Icon, title, description, items, image, index }: Se
           className={`flex justify-start md:pl-4 ${index % 2 !== 0 ? "lg:order-1" : "lg:order-2"
             }`}
         >
-          {/* <Card className="glass-card hover-lift group cursor-pointer overflow-hidden w-full p-6">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" /> */}
-
           <div className="relative z-10">
             {/* Icon */}
             <div className="flex justify-start items-center gap-3 mb-4">
@@ -61,7 +51,6 @@ const ServiceCard = ({ icon: Icon, title, description, items, image, index }: Se
               </ul>
             )}
           </div>
-          {/* </Card> */}
         </div>
       </div>
     </div>
