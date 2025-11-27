@@ -184,8 +184,8 @@ export default function ExplorePage() {
             {/* WORKFLOW SECTION */}
             <section className="section-container mt-8">
                 <div className="max-w-6xl mx-auto px-6 text-center mb-12">
-                    <h2 className="text-4xl font-bold text-primary mb-4">Streamlined Workflow</h2>
-                    <p className="text-gray-400">
+                    <h2 className="page-title">Streamlined Workflow</h2>
+                    <p className="page-description mt-2">
                         Experience automation at every stage — from ingestion to global delivery.
                     </p>
                 </div>
@@ -253,7 +253,7 @@ export default function ExplorePage() {
 
             {/* VIDEO SHOWCASE */}
             <section className="py-20 max-w-6xl mx-auto px-6 text-center">
-                <h2 className="text-4xl font-bold mb-8" data-aos="fade-up">
+                <h2 className="page-title mb-8" data-aos="fade-up">
                     Watch How It Works
                 </h2>
                 <div
@@ -271,8 +271,8 @@ export default function ExplorePage() {
             {/* TESTIMONIALS */}
             <section className="w-full py-20">
                 <div className="max-w-6xl mx-auto px-6 text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-                    <p className="text-gray-400">
+                    <h2 className="page-title">What Our Clients Say</h2>
+                    <p className="page-description mt-2">
                         Trusted by OTT leaders, filmmakers, and streaming giants worldwide.
                     </p>
                 </div>
